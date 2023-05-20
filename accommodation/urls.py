@@ -2,13 +2,12 @@ from django.urls import path
 from accommodation import views
 
 urlpatterns = [
-    
     # Accommodation URLs
     path("list/", views.AccommodationList.as_view()),
     path("create/", views.AccommodationCreate.as_view()),
-    path("detail/<int:pk>/", views.AccommodationDetail.as_view()),
-    path("update/<int:pk>/", views.AccommodationUpdate.as_view()),
-    path("delete/<int:pk>/", views.AccommodationDestroy.as_view()),
+    path("detail/<slug:slug>/", views.AccommodationDetail.as_view()),
+    path("update/<slug:slug>/", views.AccommodationUpdate.as_view()),
+    path("delete/<slug:slug>/", views.AccommodationDestroy.as_view()),
     path(
         "destination/<int:pk>/",
         views.AccommodationListByDestination.as_view(),
