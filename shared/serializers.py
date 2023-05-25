@@ -66,3 +66,21 @@ class GalleryUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Gallery
         exclude = "id"
+
+
+class CountryMonthSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.CountryMonth
+        fields = "__all__"
+
+
+class CountryFamousForSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.countryFamous
+        fields = "__all__"
+
+
+class countryHomeOfferSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.countryHomeOf
+        fields = "__all__"

@@ -31,16 +31,11 @@ class DestinationDetail(generics.GenericAPIView):
         highlights_serializer = serializers.HighlightListSerializer(
             highlights, many=True
         )
-        traveltips = destination.tips.all()
-        traveltips_serializer = serializers.TravelTipSerializer(traveltips, many=True)
         location = destination.location.all()
         location_serializer = serializers.DestinationLocationSerilializer(
             location, many=True
         )
-        transport = destination.transport.all()
-        transport_serializer = serializers.DestinationTransportSerilializer(
-            transport, many=True
-        )
+
         animalsoverview = destination.animalsoverview.all()
         animalsoverview_serializer = serializers.DestinationAnimalsOverviewSerilializer(
             animalsoverview, many=True
@@ -53,14 +48,23 @@ class DestinationDetail(generics.GenericAPIView):
             destinationmonth, many=True
         ).data
 
+        accommodation = destination.accommodations.all()
+        accommodation_serializer = acser.AccommodationSerializer(
+            accommodation, many=True
+        ).data
+
+        for accommodation_obj in accommodation_serializer:
+            accommodation_obj["image"] = request.build_absolute_uri(
+                accommodation_obj["image"]
+            )
+
         response_data = {
             "destination": destination_serializer,
             "highlights": highlights_serializer.data,
-            "tips": traveltips_serializer.data,
             "location": location_serializer.data,
-            "transport": transport_serializer.data,
             "animals": animalsoverview_serializer.data,
             "destinationmonth": destinationmonth_serializer,
+            "accommodations": accommodation_serializer,
         }
 
         return Response(response_data)
@@ -75,36 +79,6 @@ class DestinationDestroy(generics.RetrieveDestroyAPIView):
 class DestinationUpdate(generics.UpdateAPIView):
     queryset = models.Destination.objects.all()
     serializer_class = serializers.DestinationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-
-# TravelTip Create, List, Detail, Update, Delete views
-class TravelTipList(generics.ListAPIView):
-    queryset = models.TravelTip.objects.all()
-    serializer_class = serializers.TravelTipSerializer
-
-
-class TravelTipCreate(generics.CreateAPIView):
-    queryset = models.TravelTip.objects.all()
-    serializer_class = serializers.TravelTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-
-class TravelTipDetail(generics.RetrieveDestroyAPIView):
-    queryset = models.TravelTip.objects.all()
-    serializer_class = serializers.TravelTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-
-class TravelTipDestroy(generics.RetrieveDestroyAPIView):
-    queryset = models.TravelTip.objects.all()
-    serializer_class = serializers.TravelTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-
-class TravelTipUpdate(generics.UpdateAPIView):
-    queryset = models.TravelTip.objects.all()
-    serializer_class = serializers.TravelTipSerializer
     # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 

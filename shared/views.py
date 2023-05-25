@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from rest_framework import generics
+from rest_framework.response import Response
 from shared import serializers
 from destination.serializers import DestinationSerializer
 from destination.models import Destination
+from itineraries.serializers import ItinerarySerializer
 from shared import models
 
 
@@ -33,10 +35,63 @@ class CountryList(generics.ListAPIView):
     serializer_class = serializers.CountrySerializer
 
 
-class CountryCreate(generics.CreateAPIView):
+class CountryDetail(generics.GenericAPIView):
+    def get(self, request, slug):
+        country = get_object_or_404(models.Country, slug=slug)
+        country_serializer = serializers.CountrySerializer(country).data
+        country_serializer["image"] = request.build_absolute_uri(country.image.url)
+
+        destinations = country.destinations.all()
+        destinations_serializer = DestinationSerializer(destinations, many=True).data
+
+        for destination in destinations_serializer:
+            destination["image"] = request.build_absolute_uri(destination["image"])
+
+        countryMonth = country.months.all()
+        countryMonth_serializer = serializers.CountryMonthSerializer(
+            countryMonth, many=True
+        ).data
+
+        countryfamousof = country.famousof.all()
+        countryfamousof_serializer = serializers.CountryFamousForSerializer(
+            countryfamousof, many=True
+        ).data
+
+        countryhomeFor = country.homeof.all()
+        countryhomeFor_serializer = serializers.countryHomeOfferSerializer(
+            countryhomeFor, many=True
+        ).data
+
+        itineraries = country.itineraries.all()
+        itineraryserializer = ItinerarySerializer(itineraries, many=True).data
+        for itinerary in itineraryserializer:
+            itinerary["image"] = request.build_absolute_uri(itinerary["image"])
+
+        gallery_id = models.Gallery.objects.get(id=country.gallery.id)
+
+        gallery_images = gallery_id.images.all()
+
+        gallery_serializers = serializers.ImageSerializer(
+            gallery_images, many=True
+        ).data
+        for image in gallery_serializers:
+            image["image"] = request.build_absolute_uri(image["image"])
+
+        response = {
+            "country": country_serializer,
+            "destinations": destinations_serializer,
+            "countryMonth": countryMonth_serializer,
+            "countryfamousof": countryfamousof_serializer,
+            "countryhomeFor": countryhomeFor_serializer,
+            "itineraries": itineraryserializer,
+            "galleryImages": gallery_serializers,
+        }
+        return Response(response)
+
+
+class CountryDestinations(generics.RetrieveAPIView):
     queryset = models.Country.objects.all()
     serializer_class = serializers.CountrySerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class CountryDestroy(generics.DestroyAPIView):
@@ -45,9 +100,7 @@ class CountryDestroy(generics.DestroyAPIView):
     # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
-class CountryDetail(generics.RetrieveAPIView):
-    lookup_field = 'pk'
-
+class CountryCreate(generics.CreateAPIView):
     queryset = models.Country.objects.all()
     serializer_class = serializers.CountrySerializer
     # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)

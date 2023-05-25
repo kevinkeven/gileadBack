@@ -11,10 +11,11 @@ urlpatterns = [
     # Country URLs
     path("country/", views.CountryList.as_view()),
     path("country/create/", views.CountryCreate.as_view()),
-    path("country/<int:pk>/", views.CountryDetail.as_view()),
-    path("country/<int:pk>/update/", views.CountryUpdate.as_view()),
-    path("country/<int:pk>/destinations/", views.CountryDestinationsList.as_view()),
-    path("country/<int:pk>/delete/", views.CountryDestroy.as_view()),
+    path("country/dest/<int:pk>/", views.CountryDestinations.as_view()),
+    path("country/<slug:slug>/", views.CountryDetail.as_view()),
+    path("country/<slug:slug>/update/", views.CountryUpdate.as_view()),
+    path("country/<slug:slug>/destinations/", views.CountryDestinationsList.as_view()),
+    path("country/<slug:slug>/delete/", views.CountryDestroy.as_view()),
     # Activity URLs
     path("activities/", views.ActivityList.as_view()),
     path("activities/create/", views.ActivityCreate.as_view()),

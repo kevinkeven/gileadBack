@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+import uuid
 
 
 class Images(models.Model):
@@ -44,7 +45,7 @@ class Activity(models.Model):
     name = models.CharField(max_length=100, unique=True, primary_key=True)
 
     def __str__(self):
-        return f'{self.name}'
+        return f"{self.name}"
 
     class Meta:
         verbose_name_plural = "Activities"
@@ -55,13 +56,16 @@ class Country(models.Model):
     slug = models.SlugField(max_length=60)
     slogan = models.CharField(max_length=150)
     title = models.CharField(max_length=50)
-    famousfor = models.CharField(max_length=80)
-    peaktime = models.CharField(max_length=80)
-    homeof = models.CharField(max_length=80)
     image = models.ImageField(upload_to="country/images")
     description = models.TextField()
     gallery = models.ForeignKey(
         "Gallery", related_name="country", on_delete=models.CASCADE
+    )
+    longitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True
+    )
+    latitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True
     )
 
     def __str__(self):
@@ -74,22 +78,48 @@ class Country(models.Model):
 
     class Meta:
         verbose_name_plural = "Countries"
+
+
 class Month(models.Model):
-    name = models.CharField(max_length=20, primary_key=True ,unique=True)
+    name = models.CharField(
+        max_length=20, primary_key=True, unique=True, editable=False
+    )
 
     def __str__(self) -> str:
         return self.name
-    
-class CountryMonth(models.Model):
 
+
+class CountryMonth(models.Model):
     class MoodChoices(models.TextChoices):
         BEST = "BEST"
         GOOD = "GOOD"
         MIXED = "MIXED"
-    
-    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name="months")
+
+    country = models.ForeignKey(
+        Country, on_delete=models.CASCADE, related_name="months"
+    )
     month = models.ForeignKey(Month, on_delete=models.CASCADE)
     when_to_visit = models.CharField(max_length=6, choices=MoodChoices.choices)
 
     def __str__(self) -> str:
-        return f'Month for {self.destination}'
+        return f"Month for {self.country}"
+
+
+class countryHomeOf(models.Model):
+    country = models.ForeignKey(
+        Country, on_delete=models.CASCADE, related_name="homeof"
+    )
+    title = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return f"{self.title} in {self.country}"
+
+
+class countryFamous(models.Model):
+    country = models.ForeignKey(
+        Country, on_delete=models.CASCADE, related_name="famousof"
+    )
+    title = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return f"{self.title} in {self.country}"

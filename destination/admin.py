@@ -1,21 +1,46 @@
 from django.contrib import admin
 from destination import models
 
-# Register your models here.
-admin.site.register(models.TravelTip)
-admin.site.register(models.DestinationMonth)
-admin.site.register(models.DestinationAnimalsOverview)
-admin.site.register(models.DestinationLocation)
-admin.site.register(models.DestinationTransport)
+
+class HighlightInline(admin.TabularInline):
+    model = models.Highlights
+    extra = 1
 
 
+class DestinationLocationInline(admin.TabularInline):
+    model = models.DestinationLocation
+    extra = 1
 
 
+class DestinationAnimalsOverviewInline(admin.TabularInline):
+    model = models.DestinationAnimalsOverview
+    extra = 1
 
-# admin.site.register(models.Months)
-admin.site.register(models.Highlights)
+
+class DestinationMonthInline(admin.TabularInline):
+    model = models.DestinationMonth
+    extra = 1
 
 
 @admin.register(models.Destination)
 class DestinationAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "country",
+        "description",
+        "image",
+        "slug",
+    )
+    list_filter = ("name", "country")
+    search_fields = ("name", "country")
     prepopulated_fields = {"slug": ("name",)}
+    ordering = (
+        "name",
+        "country",
+    )
+    inlines = [
+        HighlightInline,
+        DestinationLocationInline,
+        DestinationAnimalsOverviewInline,
+        DestinationMonthInline,
+    ]
