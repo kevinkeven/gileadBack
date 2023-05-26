@@ -182,9 +182,9 @@ REST_FRAMEWORK = {
 
 STATIC_URL = "static/"
 STATIC_URL = "/static/"
-MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_ROOT = BASE_DIR / "media"
-STATIC_ROOT = BASE_DIR / "staticfiles/"
+MEDIA_ROOT = Path(BASE_DIR, "media")
+MEDIA_ROOT = Path(BASE_DIR, "media")
+STATIC_ROOT = Path(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
