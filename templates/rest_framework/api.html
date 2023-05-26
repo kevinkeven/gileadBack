@@ -1,0 +1,36 @@
+{% extends "rest_framework/base.html" %}
+static files
+{% load static %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/docs.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Gilead Summit Holidays API
+{% endblock %}
+
+{% block branding %}
+<h4 id="site-name"><a href="">Gilead Summit Holidays API</a></h4>
+{% endblock %}
+
+{% block nav-global %}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="">Home</a></li>
+    <li><a href="">API</a></li>
+    <li><a href="">Documentation</a></li>
+    <li><a href="">About</a></li>
+</ul>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>Powered by <a href="http://www.django-rest-framework.org/">Django REST framework</a></p>
+</footer>
+{% endblock %}
+
