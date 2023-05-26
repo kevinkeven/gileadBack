@@ -15,6 +15,7 @@ from decouple import config
 import django_heroku
 from decouple import config
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -108,14 +109,11 @@ if IS_HEROKU_APP:
     # https://devcenter.heroku.com/articles/provisioning-heroku-postgres
     # https://github.com/jazzband/dj-database-url
     DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": "gilead",
-            "USER": "gilead",
-            "PASSWORD": "admin",
-            "HOST": "localhost",
-            "PORT": "5432",
-        }
+        "default": dj_database_url.config(
+            conn_max_age=600,
+            conn_health_checks=True,
+            ssl_require=True,
+        ),
     }
 else:
     # When running locally in development or in CI, a sqlite database file will be used instead
@@ -181,20 +179,29 @@ USE_I18N = True
 USE_TZ = True
 
 CORS_ALLOW_ALL_ORIGINS = True
-EMAIL_FROM = "admin@gilead.com"
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_BCC = "admin@gilead.com"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "admin"
-EMAIL_HOST_PASSWORD = "your-smtp-password"
+# EMAIL_FROM = "admin@gilead.com"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BCC = "admin@gilead.com"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = "admin"
+# EMAIL_HOST_PASSWORD = "your-smtp-password"
 
+WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 AUTH_USER_MODEL = "accounts.User"
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.TokenAuthentication",
     )
+}
+
+STORAGES = {
+    # Enable WhiteNoise's GZip and Brotli compression of static assets:
+    # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
 }
 
 # Static files (CSS, JavaScript, Images)
