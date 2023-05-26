@@ -14,6 +14,7 @@ from pathlib import Path
 from decouple import config
 import django_heroku
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -27,7 +28,15 @@ SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
+
+if not IS_HEROKU_APP:
+    DEBUG = True
+
+if IS_HEROKU_APP:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = []
 
 ADMINS = [("Kevinkeven", "kevinkevendev@gmail.com")]
 
@@ -48,7 +57,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
-    "whitenoise",
+    "whitenoise.runserver_nostatic",
     "django_filters",
     "django_heroku",
     "drf_multiple_model",
@@ -91,6 +100,32 @@ DATABASES = {
 }
 
 ROOT_URLCONF = "gilead.urls"
+
+if IS_HEROKU_APP:
+    # In production on Heroku the database configuration is derived from the `DATABASE_URL`
+    # environment variable by the dj-database-url package. `DATABASE_URL` will be set
+    # automatically by Heroku when a database addon is attached to your Heroku app. See:
+    # https://devcenter.heroku.com/articles/provisioning-heroku-postgres
+    # https://github.com/jazzband/dj-database-url
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "gilead",
+            "USER": "gilead",
+            "PASSWORD": "admin",
+            "HOST": "localhost",
+            "PORT": "5432",
+        }
+    }
+else:
+    # When running locally in development or in CI, a sqlite database file will be used instead
+    # to simplify initial setup. Longer term it's recommended to use Postgres locally too.
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 TEMPLATES = [
     {
@@ -176,4 +211,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-django_heroku.settings(locals)
+django_heroku.settings(locals())
