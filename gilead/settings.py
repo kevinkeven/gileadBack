@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
-import django_heroku
 from decouple import config
 import os
 import dj_database_url
@@ -29,15 +28,8 @@ SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
-
-if not IS_HEROKU_APP:
-    DEBUG = True
-
-if IS_HEROKU_APP:
-    ALLOWED_HOSTS = ["*"]
-else:
-    ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = []
 
 ADMINS = [("Kevinkeven", "kevinkevendev@gmail.com")]
 
@@ -60,7 +52,6 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "whitenoise.runserver_nostatic",
     "django_filters",
-    "django_heroku",
     "drf_multiple_model",
     "corsheaders",
     "authemail",
@@ -102,28 +93,17 @@ DATABASES = {
 
 ROOT_URLCONF = "gilead.urls"
 
-if IS_HEROKU_APP:
-    # In production on Heroku the database configuration is derived from the `DATABASE_URL`
-    # environment variable by the dj-database-url package. `DATABASE_URL` will be set
-    # automatically by Heroku when a database addon is attached to your Heroku app. See:
-    # https://devcenter.heroku.com/articles/provisioning-heroku-postgres
-    # https://github.com/jazzband/dj-database-url
-    DATABASES = {
-        "default": dj_database_url.config(
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=True,
-        ),
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "gilead",
+        "USER": "gilead",
+        "PASSWORD": "admin",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
-else:
-    # When running locally in development or in CI, a sqlite database file will be used instead
-    # to simplify initial setup. Longer term it's recommended to use Postgres locally too.
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
 
 TEMPLATES = [
     {
@@ -196,13 +176,6 @@ REST_FRAMEWORK = {
     )
 }
 
-STORAGES = {
-    # Enable WhiteNoise's GZip and Brotli compression of static assets:
-    # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -217,5 +190,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+import django_on_heroku
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
