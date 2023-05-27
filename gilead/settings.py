@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     "accommodation",
     "destination",
     "itineraries",
-    "bookings",
     "search",
     "shared",
     "django.contrib.admin",
