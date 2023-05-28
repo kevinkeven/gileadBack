@@ -2,10 +2,9 @@
 __pycache__/
 .venv/
 venv/
+*.py[cod]
 
-# Django files
-staticfiles/
-db.sqlite3
+
 
 # Django #
 *.log
