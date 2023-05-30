@@ -1,5 +1,7 @@
+from typing import Iterable, Optional
 from django.db import models
 from django.conf import settings
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -21,6 +23,11 @@ class Post(models.Model):
     status = models.CharField(
         max_length=2, choices=Status.choices, default=Status.DRAFT
     )
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
     class Meta:
         ordering = ["-status"]

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    command: python /gilead/manage.py runserver 0.0.0.0:8000
+    restart: always
+    volumes:
+    - .:/gilead
+    ports:
+    - "8000:8000"
+    environment:
+    - DJANGO_SETTINGS_MODULE=gilead.settings.prod

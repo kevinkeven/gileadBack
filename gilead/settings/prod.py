@@ -2,6 +2,8 @@ from .base import *
 
 DEBUG = False
 
+CSRF_COOKIE_SECURE = True
+
 WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -18,7 +20,7 @@ DATABASES = {
         "NAME": config("POSTGRES_DATABASE"),
         "USER": config("POSTGRES_USER"),
         "PASSWORD": config("POSTGRES_PASSWORD"),
-        "HOST": config("POSTGRES_HOST", default="localhost", cast=str),
+        "HOST": config("POSTGRES_HOST", cast=str),
         "PORT": config("POSTGRES_PORT"),
     }
 }
