@@ -16,7 +16,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,8 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
 
+# ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
+DEBUG = config("DEBUG", cast=bool, default=True)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -67,10 +70,31 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config("POSTGRES_DATABASE"),
+        "USER": config("POSTGRES_USER"),
+        "PASSWORD": config("POSTGRES_PASSWORD"),
+        "HOST": config("POSTGRES_HOST", cast=str),
+        "PORT": config("POSTGRES_PORT"),
+    }
+}
 
 ROOT_URLCONF = "gilead.urls"
 
+
+MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
 
 TEMPLATES = [
     {
@@ -113,6 +137,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_FROM = config("EMAIL_FROM")
+EMAIL_BCC = config("EMAIL_BCC")
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_PORT = config("EMAIL_PORT", cast=int)
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -149,8 +181,11 @@ REST_FRAMEWORK = {
 STATIC_URL = "static/"
 STATIC_URL = "/static/"
 MEDIA_ROOT = Path(BASE_DIR, "media")
-MEDIA_ROOT = Path(BASE_DIR, "media")
 STATIC_ROOT = Path(BASE_DIR, "staticfiles/")
+
+WHITENOISE_KEEP_ONLY_HASHED_FILES = True
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
