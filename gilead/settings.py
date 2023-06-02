@@ -16,7 +16,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,7 +49,6 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
-    "whitenoise.runserver_nostatic",
     "django_filters",
     "drf_multiple_model",
     "corsheaders",
@@ -179,13 +178,10 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_URL = "/static/"
-MEDIA_ROOT = Path(BASE_DIR, "media")
-STATIC_ROOT = Path(BASE_DIR, "staticfiles/")
+MEDIA_ROOT = BASE_DIR / "media"
+STATIC_ROOT = "staticfiles/"
 
 WHITENOISE_KEEP_ONLY_HASHED_FILES = True
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
