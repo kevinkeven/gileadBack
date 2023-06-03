@@ -4,6 +4,7 @@ __pycache__/
 venv/
 
 # Django files
+staticfiles/
 db.sqlite3
 
 # Django #

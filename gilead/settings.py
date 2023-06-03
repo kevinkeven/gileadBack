@@ -95,6 +95,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -177,11 +178,10 @@ REST_FRAMEWORK = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media/"
 STATIC_URL = "static/"
-MEDIA_ROOT = BASE_DIR / "media"
 STATIC_ROOT = "staticfiles/"
-
-WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 
 
 # Default primary key field type
