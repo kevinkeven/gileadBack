@@ -27,6 +27,8 @@ SECRET_KEY = config("SECRET_KEY")
 CORS_ORIGIN_WHITELIST = config(
     "TRUSTED_ORIGINS", cast=lambda v: [s.strip() for s in v.split(",")]
 )
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = config("CSRF_COOKIE_SECURE", cast=bool)
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
