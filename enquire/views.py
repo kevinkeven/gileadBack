@@ -3,6 +3,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from enquire import serializers
 from enquire import models
+from sendgrid import SendGridAPIClient
 from django.core.mail import send_mail
 
 
@@ -30,7 +31,7 @@ class EnquireCreate(generics.CreateAPIView):
 
                 Sender's Information:
                 - First Name: {firstName}
-                - Last Name: [Sender's Last Name]
+                - Last Name: [LatName]
                 - Email: [Sender's Email]
                 - Phone Number: [Sender's Phone Number]
                 - Country: [Sender's Country]

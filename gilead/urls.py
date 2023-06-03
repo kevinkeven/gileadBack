@@ -31,4 +31,6 @@ urlpatterns = [
     # path("api/bookings/", include("bookings.urls")),
     # path("api/search/", include("search.urls")),
     # path("api/tours/", include("tours.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
