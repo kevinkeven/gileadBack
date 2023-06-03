@@ -24,11 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
-CORS_ORIGIN_WHITELIST = config(
-    "TRUSTED_ORIGINS", cast=lambda v: [s.strip() for s in v.split(",")]
-)
+CORS_ORIGIN_WHITELIST = ["https://gilead-back-end.server.cimuf.com"]
 CORS_ALLOW_CREDENTIALS = True
-CSRF_COOKIE_SECURE = config("CSRF_COOKIE_SECURE", cast=bool)
+
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
