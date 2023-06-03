@@ -24,7 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
-CSRF_TRUSTED_ORIGINS = config("TRUSTED_ORIGINS")
+CORS_ORIGIN_WHITELIST = config(
+    "TRUSTED_ORIGINS", cast=lambda v: [s.strip() for s in v.split(",")]
+)
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
