@@ -18,10 +18,6 @@ class Destination(models.Model):
     activities = models.ManyToManyField(Activity)
     wildlife = models.ManyToManyField(Wildlife)
 
-    destination_map = models.ImageField(
-        upload_to="destinations/map", blank=True, null=True
-    )
-
     def __str__(self):
         return self.name
 
