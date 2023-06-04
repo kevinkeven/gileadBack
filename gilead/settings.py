@@ -24,9 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
-CORS_ORIGIN_WHITELIST = ["https://gilead-d65.pages.dev"]
-CORS_ALLOW_CREDENTIALS = True
-
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
