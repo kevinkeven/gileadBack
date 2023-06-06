@@ -8,6 +8,12 @@ class BlogSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class BlogCreationSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        exclude = ["slug"]
+
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category

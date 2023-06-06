@@ -6,6 +6,8 @@ from destination import models
 from drf_multiple_model.views import ObjectMultipleModelAPIView
 from accommodation import serializers as acser
 from accommodation import models as acmod
+from itineraries.models import itineraries
+from itineraries.serializers import ItinerarySerializer
 
 
 # Destination Create, List, Detail, Update, Delete views
@@ -58,6 +60,12 @@ class DestinationDetail(generics.GenericAPIView):
                 accommodation_obj["image"]
             )
 
+        Itiniraries = itineraries.objects.filter(country=destination.country)
+        itiniraries_serializers = ItinerarySerializer(Itiniraries, many=True).data
+
+        for itinies in itiniraries_serializers:
+            itinies["image"] = request.build_absolute_uri(itinies["image"])
+
         response_data = {
             "destination": destination_serializer,
             "highlights": highlights_serializer.data,
@@ -65,6 +73,7 @@ class DestinationDetail(generics.GenericAPIView):
             "animals": animalsoverview_serializer.data,
             "destinationmonth": destinationmonth_serializer,
             "accommodations": accommodation_serializer,
+            "itiniraries": itiniraries_serializers,
         }
 
         return Response(response_data)
