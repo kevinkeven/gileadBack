@@ -78,7 +78,7 @@ DATABASES = {
         "USER": config("POSTGRES_USER", cast=str, default=""),
         "PASSWORD": config("POSTGRES_PASSWORD", cast=str, default=""),
         "HOST": config("POSTGRES_HOST", cast=str, default=""),
-        "PORT": config("POSTGRES_PORT", cast=int, default=""),
+        "PORT": config("POSTGRES_PORT", cast=int, default=5432),
     }
 }
 
@@ -142,7 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 EMAIL_FROM = config("EMAIL_FROM", cast=str, default="")
 EMAIL_BCC = config("EMAIL_BCC", cast=str, default="")
 EMAIL_HOST = config("EMAIL_HOST", cast=str, default="")
-EMAIL_PORT = config("EMAIL_PORT", cast=int, default="")
+EMAIL_PORT = config("EMAIL_PORT", cast=int, default=587)
 EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool, default=True)
 EMAIL_HOST_USER = config("EMAIL_HOST_USER", cast=str, default="")
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="")
