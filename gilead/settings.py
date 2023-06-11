@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="django-")
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
@@ -75,10 +75,10 @@ INSTALLED_APPS = [
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("POSTGRES_DATABASE", cast=str, default=""),
-        "USER": config("POSTGRES_USER", cast=str, default=""),
-        "PASSWORD": config("POSTGRES_PASSWORD", cast=str, default=""),
-        "HOST": config("POSTGRES_HOST", cast=str, default=""),
+        "NAME": config("POSTGRES_DATABASE", cast=str, default="gilead"),
+        "USER": config("POSTGRES_USER", cast=str, default="gilead"),
+        "PASSWORD": config("POSTGRES_PASSWORD", cast=str, default="admin"),
+        "HOST": config("POSTGRES_HOST", cast=str, default="localhost"),
         "PORT": config("POSTGRES_PORT", cast=int, default=5432),
     }
 }
@@ -140,13 +140,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-EMAIL_FROM = config("EMAIL_FROM", cast=str, default="")
-EMAIL_BCC = config("EMAIL_BCC", cast=str, default="")
-EMAIL_HOST = config("EMAIL_HOST", cast=str, default="")
+EMAIL_FROM = config("EMAIL_FROM", cast=str, default="admin@gilead.com")
+EMAIL_BCC = config("EMAIL_BCC", cast=str, default="gileadsummitholidays@gmail.com")
+EMAIL_HOST = config("EMAIL_HOST", cast=str, default="smtp.sendgrid.net")
 EMAIL_PORT = config("EMAIL_PORT", cast=int, default=587)
 EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool, default=True)
-EMAIL_HOST_USER = config("EMAIL_HOST_USER", cast=str, default="")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="")
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", cast=str, default="api")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="api")
 
 
 # Internationalization
@@ -197,10 +197,10 @@ if not DEBUG:
         },
     }
 
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", cast=str, default="")
-AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", cast=str, default="")
-AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME", cast=str, default="")
-AWS_QUERYSTRING_AUTH = config("AWS_QUERYSTRING_AUTH", cast=str, default="")
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", cast=str, default="api")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", cast=str, default="api")
+AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME", cast=str, default="api")
+AWS_QUERYSTRING_AUTH = config("AWS_QUERYSTRING_AUTH", cast=str, default="api")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
