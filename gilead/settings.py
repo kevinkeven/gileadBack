@@ -78,7 +78,7 @@ DATABASES = {
         "USER": config("POSTGRES_USER", cast=str, default=""),
         "PASSWORD": config("POSTGRES_PASSWORD", cast=str, default=""),
         "HOST": config("POSTGRES_HOST", cast=str, default=""),
-        "PORT": config("POSTGRES_PORT"),
+        "PORT": config("POSTGRES_PORT", cast=int, default=""),
     }
 }
 
