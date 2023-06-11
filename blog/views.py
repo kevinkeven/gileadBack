@@ -16,6 +16,7 @@ class BlogCreate(generics.CreateAPIView):
 
 
 class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
+    lookup_field = "slug"
     queryset = Post.objects.all()
     serializer_class = BlogSerializer
 
