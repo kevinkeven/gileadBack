@@ -140,6 +140,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 EMAIL_FROM = config("EMAIL_FROM", cast=str, default="admin@gilead.com")
 EMAIL_BCC = config("EMAIL_BCC", cast=str, default="gileadsummitholidays@gmail.com")
 EMAIL_HOST = config("EMAIL_HOST", cast=str, default="smtp.sendgrid.net")
@@ -161,14 +162,6 @@ USE_I18N = True
 USE_TZ = True
 
 CORS_ALLOW_ALL_ORIGINS = True
-# EMAIL_FROM = "admin@gilead.com"
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-# EMAIL_BCC = "admin@gilead.com"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = "admin"
-# EMAIL_HOST_PASSWORD = "your-smtp-password"
 
 AUTH_USER_MODEL = "accounts.User"
 REST_FRAMEWORK = {

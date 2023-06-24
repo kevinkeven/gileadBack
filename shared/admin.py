@@ -41,3 +41,4 @@ class countryHomeOfInline(admin.TabularInline):
 @admin.register(Country)
 class CountryAdmin(admin.ModelAdmin):
     inlines = [CountryMonthInline, countryFamousInline, countryHomeOfInline]
+    prepopulated_fields = {"slug": ("name",)}

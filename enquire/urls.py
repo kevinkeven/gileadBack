@@ -7,4 +7,7 @@ urlpatterns = [
     path("create/", views.EnquireCreate.as_view()),
     path("delete/<uuid:pk>/", views.EnquirerDelete.as_view()),
     # path(""),
+    path("contact-us/list", views.ContactUsList.as_view()),
+    path("contact-us/create", views.ContactUsCreate.as_view()),
+    path("contact-us/detail", views.ContactUsRetrieveDelete().as_view()),
 ]
