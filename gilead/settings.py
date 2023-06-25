@@ -74,12 +74,13 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("POSTGRES_DATABASE", cast=str, default="gilead"),
-        "USER": config("POSTGRES_USER", cast=str, default="gilead"),
-        "PASSWORD": config("POSTGRES_PASSWORD", cast=str, default="admin"),
-        "HOST": config("POSTGRES_HOST", cast=str, default="localhost"),
-        "PORT": config("POSTGRES_PORT", cast=int, default=5432),
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": config("GILEAD_DATABASE", cast=str, default="gilead"),
+        "USER": config("GILEAD_USER", cast=str, default="gilead"),
+        "PASSWORD": config("GILEAD_PASSWORD", cast=str, default="admin"),
+        "HOST": config("GILEAD_HOST", cast=str, default="localhost"),
+        "PORT": config("GILEAD_PORT", cast=int, default=3306),
+        "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
     }
 }
 
