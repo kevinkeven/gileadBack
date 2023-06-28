@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://gilead-back-end.server.cimuf.com",
+    "https://api.gileadsummitholidays.com",
 ]
 
 REST_FRAMEWORK = {
