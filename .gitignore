@@ -2,6 +2,9 @@
 __pycache__/
 .env
 venv/
+.htaccess
+passenger_wsgi.py
+restart.txt
 
 # Django files
 staticfiles/
