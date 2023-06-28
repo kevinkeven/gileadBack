@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
+from shared.models import Country
 from enquire import serializers
 from enquire import models
 from sendgrid import SendGridAPIClient
@@ -19,9 +20,11 @@ class EnquireCreate(generics.CreateAPIView):
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)
         form_data = response.data
-        firstName = form_data.get("first_name")
+        country_all = Country.objects.all()
+        destinations_country = ", ".join([country.name for country in country_all])
         email = form_data.get("email")
-        subject = f"New Enquiry by {form_data.get('first_name'.upper())} {form_data.get('last_name')} from Gilead summit holidays"
+
+        subject = f"New Enquiry by {form_data.get('first_name').upper()} {form_data.get('last_name')} from Gilead summit holidays"
         send_mail(
             subject,
             f"""
@@ -30,14 +33,14 @@ class EnquireCreate(generics.CreateAPIView):
                 I hope this email finds you well. I would like to bring to your attention a new enquiry received through our Gilead Summit Holidays Website. Please find the details below:
 
                 Sender's Information:
-                - First Name: {firstName}
+                - First Name: {form_data.get("first_name").upper()}
                 - Last Name: {form_data.get("last_name")}
                 - Email: {form_data.get("email")}
                 - Phone Number: {form_data.get("phone_number")}
                 - Country: {form_data.get("country")}
 
                 Travel Details:
-                - Destination: {form_data.get("travel_destination")}
+                - Destination: {destinations_country}
                 - Travel Date: {form_data.get("travel_date")}
                 - Travel Duration: {form_data.get("travel_duration")}
                 - Travel Type: {form_data.get("travel_type")}
@@ -47,8 +50,8 @@ class EnquireCreate(generics.CreateAPIView):
 
                 Please take the necessary steps to respond to this enquiry promptly and provide the sender with the required information or assistance. Kindly ensure that the sender's email and contact details are correctly recorded for effective communication.
                 """,
-            "admin@gilead.com",
-            [email],
+            "gileadsummitholidays@gmail.com",
+            ["kevinkevendev@gmail.com"],
         )
         return response
 

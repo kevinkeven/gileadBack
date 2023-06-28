@@ -1,1 +1,2159 @@
-[{"model": "accounts.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$1qff7nJGbDfpgtlA0rMEyA$tX9xHzYLWYcNxxcZnq2EHfPAzpc13yYsqfpPnHBuRT0=", "last_login": "2023-06-23T13:01:34.052Z", "is_superuser": true, "first_name": "", "last_name": "", "email": "admin@gilead.com", "is_staff": true, "is_active": true, "date_joined": "2023-06-23T10:12:32.801Z", "is_verified": true, "phone": null, "groups": [], "user_permissions": []}}, {"model": "enquire.contactus", "pk": "7e888808-b7f8-4e05-bf4e-5301a1af28a4", "fields": {"first_name": "Kevin", "last_name": "Ishimwe", "email": "kevinkeven20@gmail.com", "phone_number": "+256705266459", "country": "uganda", "message": "Hi there its your boi kevin"}}, {"model": "enquire.contactus", "pk": "a0a1883b-8f1d-4530-890e-5e6bdfebfa0c", "fields": {"first_name": "Kevin", "last_name": "Ishimwe", "email": "kevinkeven20@gmail.com", "phone_number": "+256705266459", "country": "uganda", "message": "Hi there its your boi kevin"}}, {"model": "enquire.contactus", "pk": "a62242a5-a93a-497b-8082-9d6ec25af6f8", "fields": {"first_name": "Kevin", "last_name": "Ishimwe", "email": "kevinkeven20@gmail.com", "phone_number": "+256705266459", "country": "uganda", "message": "Hi there its your boi kevin"}}, {"model": "enquire.contactus", "pk": "c533428c-3e4d-44bb-a0c3-51a17252d188", "fields": {"first_name": "Kevin", "last_name": "Ishimwe", "email": "kevinkeven20@gmail.com", "phone_number": "+256705266459", "country": "uganda", "message": "Hi there its your boi kevin"}}, {"model": "destination.destination", "pk": 1, "fields": {"country": 1, "name": "OKAVANGO DELTA", "slug": "okavango-delta", "image": "destinations/image/Okavango-Delta-Card.webp", "description": "The watery tendrils of the Okavango Delta snake out, weaving a watery web filled to the brim with exciting game-viewing opportunities in this wildlife-rich pocket of biodiversity. Home to the Big 5 and declared a UNESCO World Heritage Site, the Delta consists of endless floodplains, patches of higher ground, riverine woodland as well as forest, and the cloud-strewn Botswana sky reflecting in the still waters of the Delta below.\r\n\r\nKnown as “the river that never finds the sea”, this wetland of winding oxbow waterways is a bucket-list expedition for anyone fuelled by a love of Africa and its striking array of wildlife. Like most countries across Africa, Botswana is a vast, largely undiscovered portion of land.\r\n\r\nMany of the safari activities in the Okavango centre around the water, and travellers will find themselves exploring marshy waterways by boat and even traditional mokoro (a dugout canoe). Visitors aren’t only limited to the water, however, and they can explore higher ground in traditional game-viewing vehicles and on foot – or even take to the skies to get a bird’s-eye view of the passing game from the heights of a helicopter.\r\n\r\nMarvel at the seasonal ebb and flow of mother nature as she inundates the plains and grassland, supporting a myriad of wildlife from birds and large herds of elephant to numerous antelope species such as roan and sable. Predator sightings can include lion, leopard, spotted hyena, and the African wild dog. The Delta is an astounding safari destination due to its fascinating and ever-changing landscape and the array of wildlife that it supports.", "homeof": "The Big 5, Hippos & Crocodiles", "famousfor": "The World’s Largest Inland Delta", "activities": ["Boat Trip", "Guided Walking Safari", "Helicopter Flights"], "wildlife": ["Lechwe", "Leopard", "Lion", "Pels Fishing Owl"]}}, {"model": "destination.destinationanimalsoverview", "pk": 1, "fields": {"destination": 1, "mammal_species": "123", "identified_bird_species": "456", "amphibian_species": "432"}}, {"model": "destination.highlights", "pk": 1, "fields": {"destination": 1, "highlight_title": "Glide through the waterways in a traditional mokoro"}}, {"model": "destination.highlights", "pk": 2, "fields": {"destination": 1, "highlight_title": "Home to Mombo Camp, considered the no.1 safari camp in Africa"}}, {"model": "destination.highlights", "pk": 3, "fields": {"destination": 1, "highlight_title": "Exceptional bird watching, including rare species Pel's fishing owl"}}, {"model": "destination.highlights", "pk": 4, "fields": {"destination": 1, "highlight_title": "Encounter the rare species of Victoria Fall's rainforests"}}, {"model": "destination.highlights", "pk": 5, "fields": {"destination": 1, "highlight_title": "Glide through the waterways in a traditional mokoro"}}, {"model": "destination.destinationmonth", "pk": 1, "fields": {"destination": 1, "month": "Jan", "when_to_visit": "BEST"}}, {"model": "destination.destinationmonth", "pk": 2, "fields": {"destination": 1, "month": "Feb", "when_to_visit": "GOOD"}}, {"model": "destination.destinationmonth", "pk": 3, "fields": {"destination": 1, "month": "Mar", "when_to_visit": "GOOD"}}, {"model": "destination.destinationmonth", "pk": 4, "fields": {"destination": 1, "month": "Apr", "when_to_visit": "MIXED"}}, {"model": "destination.destinationmonth", "pk": 5, "fields": {"destination": 1, "month": "May", "when_to_visit": "BEST"}}, {"model": "destination.destinationmonth", "pk": 6, "fields": {"destination": 1, "month": "Jun", "when_to_visit": "BEST"}}, {"model": "destination.destinationmonth", "pk": 7, "fields": {"destination": 1, "month": "Jul", "when_to_visit": "MIXED"}}, {"model": "shared.images", "pk": 2, "fields": {"image": "gallery_images/Batwa_Tribe_experience-Sanctuary-Gorilla_wBNGDoG.webp", "caption": "Batwa Tribe cultural experience at Sanctuary Gorilla Forest Camp", "created_at": "2023-06-23T18:46:56.182Z"}}, {"model": "shared.images", "pk": 3, "fields": {"image": "gallery_images/Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp", "caption": "Chimpanzee trekking with Kyambura Gorge Lodge", "created_at": "2023-06-23T18:47:18.171Z"}}, {"model": "shared.images", "pk": 4, "fields": {"image": "gallery_images/Guided-rainforest-trek-with-Sanctuary-Gorilla-Forest-Camp.webp", "caption": "Guided Rainforest trek WIth Sanctuary Forest", "created_at": "2023-06-23T20:24:31.877Z"}}, {"model": "shared.gallery", "pk": 1, "fields": {"title": "uganda", "description": "uganda", "created_at": "2023-06-23T18:47:31.730Z", "images": [2, 3, 4]}}, {"model": "shared.wildlife", "pk": "Lechwe", "fields": {}}, {"model": "shared.wildlife", "pk": "Leopard", "fields": {}}, {"model": "shared.wildlife", "pk": "Lion", "fields": {}}, {"model": "shared.wildlife", "pk": "Pels Fishing Owl", "fields": {}}, {"model": "shared.activity", "pk": "Big 5 Safari", "fields": {}}, {"model": "shared.activity", "pk": "Boat Trip", "fields": {}}, {"model": "shared.activity", "pk": "Guided Walking Safari", "fields": {}}, {"model": "shared.activity", "pk": "Helicopter Flights", "fields": {}}, {"model": "shared.country", "pk": 1, "fields": {"name": "Uganda", "slug": "uganda", "slogan": "Pearl of africa", "title": "UNIQUE WILDLIFE, SERENE BEAUTY", "image": "country/images/Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp", "description": "Uganda is known as the pearl of Africa for a reason. It is probably Africa’s best-kept secret, offering a fantastic variety of experiences and landscapes while maintaining its serene beauty. A country truly gifted by nature, Uganda supports a diversity of habitats, from snow-capped mountains to lakes, winding rivers, forested reserves and jungles.\r\n\r\nUganda is a thriving destination with various opportunities for the more adventurous traveller. It forms an East African Community with Kenya and Tanzania, with Tanzania located pretty much in the heart of the continent and bordering the Democratic Republic of Congo to the west, Rwanda to the south, and Sudan to the north.\r\n\r\nHome to half of the world’s remaining mountain gorillas, Uganda offers trekking expeditions through local villages and canopies of rainforests. Here you can get the rare opportunity to see a family of gorillas nesting among the bamboo. And as if that’s not enough of an adventure, you can also stand at the foot of the continent’s tallest mountain range and see the source of the White Nile.\r\n\r\nBut Uganda is not only about meeting majestic gorillas and chimpanzees. You can also enjoy a traditional East African safari in one of the game parks dotted around the country. The Queen Elizabeth National Park is famous for its unique tree-climbing lions that rest in the giant fig tree branches.\r\n\r\nWhatever your adventurous spirit seeks, our East Africa Travel Experts can make it happen!", "gallery": 1, "longitude": null, "latitude": null}}, {"model": "shared.month", "pk": "Apr", "fields": {}}, {"model": "shared.month", "pk": "Aug", "fields": {}}, {"model": "shared.month", "pk": "Dec", "fields": {}}, {"model": "shared.month", "pk": "Feb", "fields": {}}, {"model": "shared.month", "pk": "Jan", "fields": {}}, {"model": "shared.month", "pk": "Jul", "fields": {}}, {"model": "shared.month", "pk": "Jun", "fields": {}}, {"model": "shared.month", "pk": "Mar", "fields": {}}, {"model": "shared.month", "pk": "May", "fields": {}}, {"model": "shared.month", "pk": "Nov", "fields": {}}, {"model": "shared.month", "pk": "Oct", "fields": {}}, {"model": "shared.month", "pk": "Sep", "fields": {}}, {"model": "shared.countrymonth", "pk": 1, "fields": {"country": 1, "month": "Jan", "when_to_visit": "BEST"}}, {"model": "shared.countrymonth", "pk": 2, "fields": {"country": 1, "month": "Feb", "when_to_visit": "GOOD"}}, {"model": "shared.countrymonth", "pk": 3, "fields": {"country": 1, "month": "Mar", "when_to_visit": "MIXED"}}, {"model": "shared.countrymonth", "pk": 4, "fields": {"country": 1, "month": "Apr", "when_to_visit": "BEST"}}, {"model": "shared.countrymonth", "pk": 5, "fields": {"country": 1, "month": "May", "when_to_visit": "BEST"}}, {"model": "shared.countrymonth", "pk": 6, "fields": {"country": 1, "month": "Jun", "when_to_visit": "GOOD"}}, {"model": "shared.countrymonth", "pk": 7, "fields": {"country": 1, "month": "Jul", "when_to_visit": "GOOD"}}, {"model": "shared.countrymonth", "pk": 8, "fields": {"country": 1, "month": "Aug", "when_to_visit": "GOOD"}}, {"model": "shared.countrymonth", "pk": 9, "fields": {"country": 1, "month": "Sep", "when_to_visit": "GOOD"}}, {"model": "shared.countrymonth", "pk": 10, "fields": {"country": 1, "month": "Oct", "when_to_visit": "MIXED"}}, {"model": "shared.countrymonth", "pk": 11, "fields": {"country": 1, "month": "Nov", "when_to_visit": "MIXED"}}, {"model": "shared.countrymonth", "pk": 12, "fields": {"country": 1, "month": "Dec", "when_to_visit": "BEST"}}, {"model": "shared.countryhomeof", "pk": 1, "fields": {"country": 1, "title": "Indigenous culture, like Batwa"}}, {"model": "shared.countryfamous", "pk": 1, "fields": {"country": 1, "title": "Lake victoria"}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2023-06-23T18:46:37.127Z", "user": 1, "content_type": 27, "object_id": "1", "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla.webp", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2023-06-23T18:46:56.186Z", "user": 1, "content_type": 27, "object_id": "2", "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla_wBNGDoG.webp", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2023-06-23T18:47:18.175Z", "user": 1, "content_type": 27, "object_id": "3", "object_repr": "Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2023-06-23T18:47:31.753Z", "user": 1, "content_type": 30, "object_id": "1", "object_repr": "uganda", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2023-06-23T18:51:56.226Z", "user": 1, "content_type": 26, "object_id": "1", "object_repr": "Uganda", "action_flag": 1, "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country famous\", \"object\": \"Lake victoria in Uganda\"}}, {\"added\": {\"name\": \"country home of\", \"object\": \"Indigenous culture, like Batwa in Uganda\"}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2023-06-23T19:56:06.650Z", "user": 1, "content_type": 25, "object_id": "Big 5 Safari", "object_repr": "Big 5 Safari", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2023-06-23T19:57:13.421Z", "user": 1, "content_type": 25, "object_id": "Boat Trip", "object_repr": "Boat Trip", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2023-06-23T19:57:28.869Z", "user": 1, "content_type": 25, "object_id": "Guided Walking Safari", "object_repr": "Guided Walking Safari", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2023-06-23T19:57:43.179Z", "user": 1, "content_type": 25, "object_id": "Helicopter Flights", "object_repr": "Helicopter Flights", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2023-06-23T19:58:26.444Z", "user": 1, "content_type": 29, "object_id": "Pels Fishing Owl", "object_repr": "Pels Fishing Owl", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2023-06-23T20:00:24.140Z", "user": 1, "content_type": 29, "object_id": "Lion", "object_repr": "Lion", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2023-06-23T20:01:00.388Z", "user": 1, "content_type": 29, "object_id": "Leopard", "object_repr": "Leopard", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2023-06-23T20:02:26.231Z", "user": 1, "content_type": 29, "object_id": "Lechwe", "object_repr": "Lechwe", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2023-06-23T20:06:22.272Z", "user": 1, "content_type": 14, "object_id": "1", "object_repr": "uganda", "action_flag": 1, "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Glide through the waterways in a traditional mokoro\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Home to Mombo Camp, considered the no.1 safari camp in Africa\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Exceptional bird watching, including rare species Pel's fishing owl\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Encounter the rare species of Victoria Fall's rainforests\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Glide through the waterways in a traditional mokoro\"}}, {\"added\": {\"name\": \"destination animals overview\", \"object\": \"DestinationAnimalsOverview object (1)\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jan\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Feb\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Mar\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Apr\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - May\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jun\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jul\"}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2023-06-23T20:15:51.815Z", "user": 1, "content_type": 14, "object_id": "1", "object_repr": "OKAVANGO DELTA", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2023-06-23T20:17:33.002Z", "user": 1, "content_type": 27, "object_id": "1", "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla.webp", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2023-06-23T20:24:31.880Z", "user": 1, "content_type": 27, "object_id": "4", "object_repr": "Guided-rainforest-trek-with-Sanctuary-Gorilla-Forest-Camp.webp", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2023-06-23T20:24:35.090Z", "user": 1, "content_type": 30, "object_id": "1", "object_repr": "uganda", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Images\"]}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add Token", "content_type": 1, "codename": "add_token"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change Token", "content_type": 1, "codename": "change_token"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete Token", "content_type": 1, "codename": "delete_token"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view Token", "content_type": 1, "codename": "view_token"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add token", "content_type": 2, "codename": "add_tokenproxy"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change token", "content_type": 2, "codename": "change_tokenproxy"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete token", "content_type": 2, "codename": "delete_tokenproxy"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view token", "content_type": 2, "codename": "view_tokenproxy"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add password reset code", "content_type": 3, "codename": "add_passwordresetcode"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change password reset code", "content_type": 3, "codename": "change_passwordresetcode"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete password reset code", "content_type": 3, "codename": "delete_passwordresetcode"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view password reset code", "content_type": 3, "codename": "view_passwordresetcode"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add signup code", "content_type": 4, "codename": "add_signupcode"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change signup code", "content_type": 4, "codename": "change_signupcode"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete signup code", "content_type": 4, "codename": "delete_signupcode"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view signup code", "content_type": 4, "codename": "view_signupcode"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add email change code", "content_type": 5, "codename": "add_emailchangecode"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change email change code", "content_type": 5, "codename": "change_emailchangecode"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete email change code", "content_type": 5, "codename": "delete_emailchangecode"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view email change code", "content_type": 5, "codename": "view_emailchangecode"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add user", "content_type": 6, "codename": "add_user"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change user", "content_type": 6, "codename": "change_user"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete user", "content_type": 6, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view user", "content_type": 6, "codename": "view_user"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add category", "content_type": 7, "codename": "add_category"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change category", "content_type": 7, "codename": "change_category"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete category", "content_type": 7, "codename": "delete_category"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view category", "content_type": 7, "codename": "view_category"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add post", "content_type": 8, "codename": "add_post"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change post", "content_type": 8, "codename": "change_post"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete post", "content_type": 8, "codename": "delete_post"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view post", "content_type": 8, "codename": "view_post"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add enquire", "content_type": 9, "codename": "add_enquire"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change enquire", "content_type": 9, "codename": "change_enquire"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete enquire", "content_type": 9, "codename": "delete_enquire"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view enquire", "content_type": 9, "codename": "view_enquire"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add accommodation", "content_type": 10, "codename": "add_accommodation"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change accommodation", "content_type": 10, "codename": "change_accommodation"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete accommodation", "content_type": 10, "codename": "delete_accommodation"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view accommodation", "content_type": 10, "codename": "view_accommodation"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add insider tip", "content_type": 11, "codename": "add_insidertip"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change insider tip", "content_type": 11, "codename": "change_insidertip"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete insider tip", "content_type": 11, "codename": "delete_insidertip"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view insider tip", "content_type": 11, "codename": "view_insidertip"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add glance", "content_type": 12, "codename": "add_glance"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change glance", "content_type": 12, "codename": "change_glance"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete glance", "content_type": 12, "codename": "delete_glance"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view glance", "content_type": 12, "codename": "view_glance"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add expert view", "content_type": 13, "codename": "add_expertview"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change expert view", "content_type": 13, "codename": "change_expertview"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete expert view", "content_type": 13, "codename": "delete_expertview"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view expert view", "content_type": 13, "codename": "view_expertview"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add destination", "content_type": 14, "codename": "add_destination"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change destination", "content_type": 14, "codename": "change_destination"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete destination", "content_type": 14, "codename": "delete_destination"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view destination", "content_type": 14, "codename": "view_destination"}}, {"model": "auth.permission", "pk": 57, "fields": {"name": "Can add highlights", "content_type": 15, "codename": "add_highlights"}}, {"model": "auth.permission", "pk": 58, "fields": {"name": "Can change highlights", "content_type": 15, "codename": "change_highlights"}}, {"model": "auth.permission", "pk": 59, "fields": {"name": "Can delete highlights", "content_type": 15, "codename": "delete_highlights"}}, {"model": "auth.permission", "pk": 60, "fields": {"name": "Can view highlights", "content_type": 15, "codename": "view_highlights"}}, {"model": "auth.permission", "pk": 61, "fields": {"name": "Can add destination month", "content_type": 16, "codename": "add_destinationmonth"}}, {"model": "auth.permission", "pk": 62, "fields": {"name": "Can change destination month", "content_type": 16, "codename": "change_destinationmonth"}}, {"model": "auth.permission", "pk": 63, "fields": {"name": "Can delete destination month", "content_type": 16, "codename": "delete_destinationmonth"}}, {"model": "auth.permission", "pk": 64, "fields": {"name": "Can view destination month", "content_type": 16, "codename": "view_destinationmonth"}}, {"model": "auth.permission", "pk": 65, "fields": {"name": "Can add destination location", "content_type": 17, "codename": "add_destinationlocation"}}, {"model": "auth.permission", "pk": 66, "fields": {"name": "Can change destination location", "content_type": 17, "codename": "change_destinationlocation"}}, {"model": "auth.permission", "pk": 67, "fields": {"name": "Can delete destination location", "content_type": 17, "codename": "delete_destinationlocation"}}, {"model": "auth.permission", "pk": 68, "fields": {"name": "Can view destination location", "content_type": 17, "codename": "view_destinationlocation"}}, {"model": "auth.permission", "pk": 69, "fields": {"name": "Can add destination animals overview", "content_type": 18, "codename": "add_destinationanimalsoverview"}}, {"model": "auth.permission", "pk": 70, "fields": {"name": "Can change destination animals overview", "content_type": 18, "codename": "change_destinationanimalsoverview"}}, {"model": "auth.permission", "pk": 71, "fields": {"name": "Can delete destination animals overview", "content_type": 18, "codename": "delete_destinationanimalsoverview"}}, {"model": "auth.permission", "pk": 72, "fields": {"name": "Can view destination animals overview", "content_type": 18, "codename": "view_destinationanimalsoverview"}}, {"model": "auth.permission", "pk": 73, "fields": {"name": "Can add itineraries", "content_type": 19, "codename": "add_itineraries"}}, {"model": "auth.permission", "pk": 74, "fields": {"name": "Can change itineraries", "content_type": 19, "codename": "change_itineraries"}}, {"model": "auth.permission", "pk": 75, "fields": {"name": "Can delete itineraries", "content_type": 19, "codename": "delete_itineraries"}}, {"model": "auth.permission", "pk": 76, "fields": {"name": "Can view itineraries", "content_type": 19, "codename": "view_itineraries"}}, {"model": "auth.permission", "pk": 77, "fields": {"name": "Can add itinerary month", "content_type": 20, "codename": "add_itinerarymonth"}}, {"model": "auth.permission", "pk": 78, "fields": {"name": "Can change itinerary month", "content_type": 20, "codename": "change_itinerarymonth"}}, {"model": "auth.permission", "pk": 79, "fields": {"name": "Can delete itinerary month", "content_type": 20, "codename": "delete_itinerarymonth"}}, {"model": "auth.permission", "pk": 80, "fields": {"name": "Can view itinerary month", "content_type": 20, "codename": "view_itinerarymonth"}}, {"model": "auth.permission", "pk": 81, "fields": {"name": "Can add itinerary activity", "content_type": 21, "codename": "add_itineraryactivity"}}, {"model": "auth.permission", "pk": 82, "fields": {"name": "Can change itinerary activity", "content_type": 21, "codename": "change_itineraryactivity"}}, {"model": "auth.permission", "pk": 83, "fields": {"name": "Can delete itinerary activity", "content_type": 21, "codename": "delete_itineraryactivity"}}, {"model": "auth.permission", "pk": 84, "fields": {"name": "Can view itinerary activity", "content_type": 21, "codename": "view_itineraryactivity"}}, {"model": "auth.permission", "pk": 85, "fields": {"name": "Can add included", "content_type": 22, "codename": "add_included"}}, {"model": "auth.permission", "pk": 86, "fields": {"name": "Can change included", "content_type": 22, "codename": "change_included"}}, {"model": "auth.permission", "pk": 87, "fields": {"name": "Can delete included", "content_type": 22, "codename": "delete_included"}}, {"model": "auth.permission", "pk": 88, "fields": {"name": "Can view included", "content_type": 22, "codename": "view_included"}}, {"model": "auth.permission", "pk": 89, "fields": {"name": "Can add excluded", "content_type": 23, "codename": "add_excluded"}}, {"model": "auth.permission", "pk": 90, "fields": {"name": "Can change excluded", "content_type": 23, "codename": "change_excluded"}}, {"model": "auth.permission", "pk": 91, "fields": {"name": "Can delete excluded", "content_type": 23, "codename": "delete_excluded"}}, {"model": "auth.permission", "pk": 92, "fields": {"name": "Can view excluded", "content_type": 23, "codename": "view_excluded"}}, {"model": "auth.permission", "pk": 93, "fields": {"name": "Can add day by day", "content_type": 24, "codename": "add_daybyday"}}, {"model": "auth.permission", "pk": 94, "fields": {"name": "Can change day by day", "content_type": 24, "codename": "change_daybyday"}}, {"model": "auth.permission", "pk": 95, "fields": {"name": "Can delete day by day", "content_type": 24, "codename": "delete_daybyday"}}, {"model": "auth.permission", "pk": 96, "fields": {"name": "Can view day by day", "content_type": 24, "codename": "view_daybyday"}}, {"model": "auth.permission", "pk": 97, "fields": {"name": "Can add activity", "content_type": 25, "codename": "add_activity"}}, {"model": "auth.permission", "pk": 98, "fields": {"name": "Can change activity", "content_type": 25, "codename": "change_activity"}}, {"model": "auth.permission", "pk": 99, "fields": {"name": "Can delete activity", "content_type": 25, "codename": "delete_activity"}}, {"model": "auth.permission", "pk": 100, "fields": {"name": "Can view activity", "content_type": 25, "codename": "view_activity"}}, {"model": "auth.permission", "pk": 101, "fields": {"name": "Can add country", "content_type": 26, "codename": "add_country"}}, {"model": "auth.permission", "pk": 102, "fields": {"name": "Can change country", "content_type": 26, "codename": "change_country"}}, {"model": "auth.permission", "pk": 103, "fields": {"name": "Can delete country", "content_type": 26, "codename": "delete_country"}}, {"model": "auth.permission", "pk": 104, "fields": {"name": "Can view country", "content_type": 26, "codename": "view_country"}}, {"model": "auth.permission", "pk": 105, "fields": {"name": "Can add images", "content_type": 27, "codename": "add_images"}}, {"model": "auth.permission", "pk": 106, "fields": {"name": "Can change images", "content_type": 27, "codename": "change_images"}}, {"model": "auth.permission", "pk": 107, "fields": {"name": "Can delete images", "content_type": 27, "codename": "delete_images"}}, {"model": "auth.permission", "pk": 108, "fields": {"name": "Can view images", "content_type": 27, "codename": "view_images"}}, {"model": "auth.permission", "pk": 109, "fields": {"name": "Can add month", "content_type": 28, "codename": "add_month"}}, {"model": "auth.permission", "pk": 110, "fields": {"name": "Can change month", "content_type": 28, "codename": "change_month"}}, {"model": "auth.permission", "pk": 111, "fields": {"name": "Can delete month", "content_type": 28, "codename": "delete_month"}}, {"model": "auth.permission", "pk": 112, "fields": {"name": "Can view month", "content_type": 28, "codename": "view_month"}}, {"model": "auth.permission", "pk": 113, "fields": {"name": "Can add wildlife", "content_type": 29, "codename": "add_wildlife"}}, {"model": "auth.permission", "pk": 114, "fields": {"name": "Can change wildlife", "content_type": 29, "codename": "change_wildlife"}}, {"model": "auth.permission", "pk": 115, "fields": {"name": "Can delete wildlife", "content_type": 29, "codename": "delete_wildlife"}}, {"model": "auth.permission", "pk": 116, "fields": {"name": "Can view wildlife", "content_type": 29, "codename": "view_wildlife"}}, {"model": "auth.permission", "pk": 117, "fields": {"name": "Can add gallery", "content_type": 30, "codename": "add_gallery"}}, {"model": "auth.permission", "pk": 118, "fields": {"name": "Can change gallery", "content_type": 30, "codename": "change_gallery"}}, {"model": "auth.permission", "pk": 119, "fields": {"name": "Can delete gallery", "content_type": 30, "codename": "delete_gallery"}}, {"model": "auth.permission", "pk": 120, "fields": {"name": "Can view gallery", "content_type": 30, "codename": "view_gallery"}}, {"model": "auth.permission", "pk": 121, "fields": {"name": "Can add country month", "content_type": 31, "codename": "add_countrymonth"}}, {"model": "auth.permission", "pk": 122, "fields": {"name": "Can change country month", "content_type": 31, "codename": "change_countrymonth"}}, {"model": "auth.permission", "pk": 123, "fields": {"name": "Can delete country month", "content_type": 31, "codename": "delete_countrymonth"}}, {"model": "auth.permission", "pk": 124, "fields": {"name": "Can view country month", "content_type": 31, "codename": "view_countrymonth"}}, {"model": "auth.permission", "pk": 125, "fields": {"name": "Can add country home of", "content_type": 32, "codename": "add_countryhomeof"}}, {"model": "auth.permission", "pk": 126, "fields": {"name": "Can change country home of", "content_type": 32, "codename": "change_countryhomeof"}}, {"model": "auth.permission", "pk": 127, "fields": {"name": "Can delete country home of", "content_type": 32, "codename": "delete_countryhomeof"}}, {"model": "auth.permission", "pk": 128, "fields": {"name": "Can view country home of", "content_type": 32, "codename": "view_countryhomeof"}}, {"model": "auth.permission", "pk": 129, "fields": {"name": "Can add country famous", "content_type": 33, "codename": "add_countryfamous"}}, {"model": "auth.permission", "pk": 130, "fields": {"name": "Can change country famous", "content_type": 33, "codename": "change_countryfamous"}}, {"model": "auth.permission", "pk": 131, "fields": {"name": "Can delete country famous", "content_type": 33, "codename": "delete_countryfamous"}}, {"model": "auth.permission", "pk": 132, "fields": {"name": "Can view country famous", "content_type": 33, "codename": "view_countryfamous"}}, {"model": "auth.permission", "pk": 133, "fields": {"name": "Can add log entry", "content_type": 34, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 134, "fields": {"name": "Can change log entry", "content_type": 34, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 135, "fields": {"name": "Can delete log entry", "content_type": 34, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 136, "fields": {"name": "Can view log entry", "content_type": 34, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 137, "fields": {"name": "Can add permission", "content_type": 35, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 138, "fields": {"name": "Can change permission", "content_type": 35, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 139, "fields": {"name": "Can delete permission", "content_type": 35, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 140, "fields": {"name": "Can view permission", "content_type": 35, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 141, "fields": {"name": "Can add group", "content_type": 36, "codename": "add_group"}}, {"model": "auth.permission", "pk": 142, "fields": {"name": "Can change group", "content_type": 36, "codename": "change_group"}}, {"model": "auth.permission", "pk": 143, "fields": {"name": "Can delete group", "content_type": 36, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 144, "fields": {"name": "Can view group", "content_type": 36, "codename": "view_group"}}, {"model": "auth.permission", "pk": 145, "fields": {"name": "Can add content type", "content_type": 37, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 146, "fields": {"name": "Can change content type", "content_type": 37, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 147, "fields": {"name": "Can delete content type", "content_type": 37, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 148, "fields": {"name": "Can view content type", "content_type": 37, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 149, "fields": {"name": "Can add session", "content_type": 38, "codename": "add_session"}}, {"model": "auth.permission", "pk": 150, "fields": {"name": "Can change session", "content_type": 38, "codename": "change_session"}}, {"model": "auth.permission", "pk": 151, "fields": {"name": "Can delete session", "content_type": 38, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 152, "fields": {"name": "Can view session", "content_type": 38, "codename": "view_session"}}, {"model": "auth.permission", "pk": 153, "fields": {"name": "Can add contact us", "content_type": 39, "codename": "add_contactus"}}, {"model": "auth.permission", "pk": 154, "fields": {"name": "Can change contact us", "content_type": 39, "codename": "change_contactus"}}, {"model": "auth.permission", "pk": 155, "fields": {"name": "Can delete contact us", "content_type": 39, "codename": "delete_contactus"}}, {"model": "auth.permission", "pk": 156, "fields": {"name": "Can view contact us", "content_type": 39, "codename": "view_contactus"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "authtoken", "model": "token"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "authtoken", "model": "tokenproxy"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "authemail", "model": "passwordresetcode"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "authemail", "model": "signupcode"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "authemail", "model": "emailchangecode"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "accounts", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "blog", "model": "category"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "blog", "model": "post"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "enquire", "model": "enquire"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "accommodation", "model": "accommodation"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "accommodation", "model": "insidertip"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "accommodation", "model": "glance"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "accommodation", "model": "expertview"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "destination", "model": "destination"}}, {"model": "contenttypes.contenttype", "pk": 15, "fields": {"app_label": "destination", "model": "highlights"}}, {"model": "contenttypes.contenttype", "pk": 16, "fields": {"app_label": "destination", "model": "destinationmonth"}}, {"model": "contenttypes.contenttype", "pk": 17, "fields": {"app_label": "destination", "model": "destinationlocation"}}, {"model": "contenttypes.contenttype", "pk": 18, "fields": {"app_label": "destination", "model": "destinationanimalsoverview"}}, {"model": "contenttypes.contenttype", "pk": 19, "fields": {"app_label": "itineraries", "model": "itineraries"}}, {"model": "contenttypes.contenttype", "pk": 20, "fields": {"app_label": "itineraries", "model": "itinerarymonth"}}, {"model": "contenttypes.contenttype", "pk": 21, "fields": {"app_label": "itineraries", "model": "itineraryactivity"}}, {"model": "contenttypes.contenttype", "pk": 22, "fields": {"app_label": "itineraries", "model": "included"}}, {"model": "contenttypes.contenttype", "pk": 23, "fields": {"app_label": "itineraries", "model": "excluded"}}, {"model": "contenttypes.contenttype", "pk": 24, "fields": {"app_label": "itineraries", "model": "daybyday"}}, {"model": "contenttypes.contenttype", "pk": 25, "fields": {"app_label": "shared", "model": "activity"}}, {"model": "contenttypes.contenttype", "pk": 26, "fields": {"app_label": "shared", "model": "country"}}, {"model": "contenttypes.contenttype", "pk": 27, "fields": {"app_label": "shared", "model": "images"}}, {"model": "contenttypes.contenttype", "pk": 28, "fields": {"app_label": "shared", "model": "month"}}, {"model": "contenttypes.contenttype", "pk": 29, "fields": {"app_label": "shared", "model": "wildlife"}}, {"model": "contenttypes.contenttype", "pk": 30, "fields": {"app_label": "shared", "model": "gallery"}}, {"model": "contenttypes.contenttype", "pk": 31, "fields": {"app_label": "shared", "model": "countrymonth"}}, {"model": "contenttypes.contenttype", "pk": 32, "fields": {"app_label": "shared", "model": "countryhomeof"}}, {"model": "contenttypes.contenttype", "pk": 33, "fields": {"app_label": "shared", "model": "countryfamous"}}, {"model": "contenttypes.contenttype", "pk": 34, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 35, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 36, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 37, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 38, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 39, "fields": {"app_label": "enquire", "model": "contactus"}}, {"model": "sessions.session", "pk": "uw2jwfcjtbmqrgck31alzbxntul8zi0l", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hCYDgIu3fcMZICpVA0kpV0Z765NutDtf-_9lwi0rSVsnZcwZ3ERWpx-t0jpwXUH-U711mRqdV3mKHdFHrTLsWV-Xg_376BQL98aUTtjImVCUMZqnOyABCoxITtUPHDKfgJv_ZkVowVKzkNEA6yZtHh_AM-UN5g:1qCgPu:VBuVO5r3fbxrxYx0oN5XON4K1iu58TqEfZibIP1pFEk", "expire_date": "2023-07-07T13:01:34.059Z"}}]
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$1qff7nJGbDfpgtlA0rMEyA$tX9xHzYLWYcNxxcZnq2EHfPAzpc13yYsqfpPnHBuRT0=",
+      "last_login": "2023-06-23T13:01:34.052Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@gilead.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-06-23T10:12:32.801Z",
+      "is_verified": true,
+      "phone": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "enquire.contactus",
+    "pk": "7e888808-b7f8-4e05-bf4e-5301a1af28a4",
+    "fields": {
+      "first_name": "Kevin",
+      "last_name": "Ishimwe",
+      "email": "kevinkeven20@gmail.com",
+      "phone_number": "+256705266459",
+      "country": "uganda",
+      "message": "Hi there its your boi kevin"
+    }
+  },
+  {
+    "model": "enquire.contactus",
+    "pk": "a0a1883b-8f1d-4530-890e-5e6bdfebfa0c",
+    "fields": {
+      "first_name": "Kevin",
+      "last_name": "Ishimwe",
+      "email": "kevinkeven20@gmail.com",
+      "phone_number": "+256705266459",
+      "country": "uganda",
+      "message": "Hi there its your boi kevin"
+    }
+  },
+  {
+    "model": "enquire.contactus",
+    "pk": "a62242a5-a93a-497b-8082-9d6ec25af6f8",
+    "fields": {
+      "first_name": "Kevin",
+      "last_name": "Ishimwe",
+      "email": "kevinkeven20@gmail.com",
+      "phone_number": "+256705266459",
+      "country": "uganda",
+      "message": "Hi there its your boi kevin"
+    }
+  },
+  {
+    "model": "enquire.contactus",
+    "pk": "c533428c-3e4d-44bb-a0c3-51a17252d188",
+    "fields": {
+      "first_name": "Kevin",
+      "last_name": "Ishimwe",
+      "email": "kevinkeven20@gmail.com",
+      "phone_number": "+256705266459",
+      "country": "uganda",
+      "message": "Hi there its your boi kevin"
+    }
+  },
+  {
+    "model": "destination.destination",
+    "pk": 1,
+    "fields": {
+      "country": 1,
+      "name": "OKAVANGO DELTA",
+      "slug": "okavango-delta",
+      "image": "destinations/image/Okavango-Delta-Card.webp",
+      "description": "The watery tendrils of the Okavango Delta snake out, weaving a watery web filled to the brim with exciting game-viewing opportunities in this wildlife-rich pocket of biodiversity. Home to the Big 5 and declared a UNESCO World Heritage Site, the Delta consists of endless floodplains, patches of higher ground, riverine woodland as well as forest, and the cloud-strewn Botswana sky reflecting in the still waters of the Delta below.\r\n\r\nKnown as “the river that never finds the sea”, this wetland of winding oxbow waterways is a bucket-list expedition for anyone fuelled by a love of Africa and its striking array of wildlife. Like most countries across Africa, Botswana is a vast, largely undiscovered portion of land.\r\n\r\nMany of the safari activities in the Okavango centre around the water, and travellers will find themselves exploring marshy waterways by boat and even traditional mokoro (a dugout canoe). Visitors aren’t only limited to the water, however, and they can explore higher ground in traditional game-viewing vehicles and on foot – or even take to the skies to get a bird’s-eye view of the passing game from the heights of a helicopter.\r\n\r\nMarvel at the seasonal ebb and flow of mother nature as she inundates the plains and grassland, supporting a myriad of wildlife from birds and large herds of elephant to numerous antelope species such as roan and sable. Predator sightings can include lion, leopard, spotted hyena, and the African wild dog. The Delta is an astounding safari destination due to its fascinating and ever-changing landscape and the array of wildlife that it supports.",
+      "homeof": "The Big 5, Hippos & Crocodiles",
+      "famousfor": "The World’s Largest Inland Delta",
+      "activities": [
+        "Boat Trip",
+        "Guided Walking Safari",
+        "Helicopter Flights"
+      ],
+      "wildlife": ["Lechwe", "Leopard", "Lion", "Pels Fishing Owl"]
+    }
+  },
+  {
+    "model": "destination.destinationanimalsoverview",
+    "pk": 1,
+    "fields": {
+      "destination": 1,
+      "mammal_species": "123",
+      "identified_bird_species": "456",
+      "amphibian_species": "432"
+    }
+  },
+  {
+    "model": "destination.highlights",
+    "pk": 1,
+    "fields": {
+      "destination": 1,
+      "highlight_title": "Glide through the waterways in a traditional mokoro"
+    }
+  },
+  {
+    "model": "destination.highlights",
+    "pk": 2,
+    "fields": {
+      "destination": 1,
+      "highlight_title": "Home to Mombo Camp, considered the no.1 safari camp in Africa"
+    }
+  },
+  {
+    "model": "destination.highlights",
+    "pk": 3,
+    "fields": {
+      "destination": 1,
+      "highlight_title": "Exceptional bird watching, including rare species Pel's fishing owl"
+    }
+  },
+  {
+    "model": "destination.highlights",
+    "pk": 4,
+    "fields": {
+      "destination": 1,
+      "highlight_title": "Encounter the rare species of Victoria Fall's rainforests"
+    }
+  },
+  {
+    "model": "destination.highlights",
+    "pk": 5,
+    "fields": {
+      "destination": 1,
+      "highlight_title": "Glide through the waterways in a traditional mokoro"
+    }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 1,
+    "fields": { "destination": 1, "month": "Jan", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 2,
+    "fields": { "destination": 1, "month": "Feb", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 3,
+    "fields": { "destination": 1, "month": "Mar", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 4,
+    "fields": { "destination": 1, "month": "Apr", "when_to_visit": "MIXED" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 5,
+    "fields": { "destination": 1, "month": "May", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 6,
+    "fields": { "destination": 1, "month": "Jun", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "destination.destinationmonth",
+    "pk": 7,
+    "fields": { "destination": 1, "month": "Jul", "when_to_visit": "MIXED" }
+  },
+  {
+    "model": "shared.images",
+    "pk": 2,
+    "fields": {
+      "image": "gallery_images/Batwa_Tribe_experience-Sanctuary-Gorilla_wBNGDoG.webp",
+      "caption": "Batwa Tribe cultural experience at Sanctuary Gorilla Forest Camp",
+      "created_at": "2023-06-23T18:46:56.182Z"
+    }
+  },
+  {
+    "model": "shared.images",
+    "pk": 3,
+    "fields": {
+      "image": "gallery_images/Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp",
+      "caption": "Chimpanzee trekking with Kyambura Gorge Lodge",
+      "created_at": "2023-06-23T18:47:18.171Z"
+    }
+  },
+  {
+    "model": "shared.images",
+    "pk": 4,
+    "fields": {
+      "image": "gallery_images/Guided-rainforest-trek-with-Sanctuary-Gorilla-Forest-Camp.webp",
+      "caption": "Guided Rainforest trek WIth Sanctuary Forest",
+      "created_at": "2023-06-23T20:24:31.877Z"
+    }
+  },
+  {
+    "model": "shared.gallery",
+    "pk": 1,
+    "fields": {
+      "title": "uganda",
+      "description": "uganda",
+      "created_at": "2023-06-23T18:47:31.730Z",
+      "images": [2, 3, 4]
+    }
+  },
+  { "model": "shared.wildlife", "pk": "Lechwe", "fields": {} },
+  { "model": "shared.wildlife", "pk": "Leopard", "fields": {} },
+  { "model": "shared.wildlife", "pk": "Lion", "fields": {} },
+  { "model": "shared.wildlife", "pk": "Pels Fishing Owl", "fields": {} },
+  { "model": "shared.activity", "pk": "Big 5 Safari", "fields": {} },
+  { "model": "shared.activity", "pk": "Boat Trip", "fields": {} },
+  { "model": "shared.activity", "pk": "Guided Walking Safari", "fields": {} },
+  { "model": "shared.activity", "pk": "Helicopter Flights", "fields": {} },
+  {
+    "model": "shared.country",
+    "pk": 1,
+    "fields": {
+      "name": "Uganda",
+      "slug": "uganda",
+      "slogan": "Pearl of africa",
+      "title": "UNIQUE WILDLIFE, SERENE BEAUTY",
+      "image": "country/images/Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp",
+      "description": "Uganda is known as the pearl of Africa for a reason. It is probably Africa’s best-kept secret, offering a fantastic variety of experiences and landscapes while maintaining its serene beauty. A country truly gifted by nature, Uganda supports a diversity of habitats, from snow-capped mountains to lakes, winding rivers, forested reserves and jungles.\r\n\r\nUganda is a thriving destination with various opportunities for the more adventurous traveller. It forms an East African Community with Kenya and Tanzania, with Tanzania located pretty much in the heart of the continent and bordering the Democratic Republic of Congo to the west, Rwanda to the south, and Sudan to the north.\r\n\r\nHome to half of the world’s remaining mountain gorillas, Uganda offers trekking expeditions through local villages and canopies of rainforests. Here you can get the rare opportunity to see a family of gorillas nesting among the bamboo. And as if that’s not enough of an adventure, you can also stand at the foot of the continent’s tallest mountain range and see the source of the White Nile.\r\n\r\nBut Uganda is not only about meeting majestic gorillas and chimpanzees. You can also enjoy a traditional East African safari in one of the game parks dotted around the country. The Queen Elizabeth National Park is famous for its unique tree-climbing lions that rest in the giant fig tree branches.\r\n\r\nWhatever your adventurous spirit seeks, our East Africa Travel Experts can make it happen!",
+      "gallery": 1,
+      "longitude": null,
+      "latitude": null
+    }
+  },
+  { "model": "shared.month", "pk": "Apr", "fields": {} },
+  { "model": "shared.month", "pk": "Aug", "fields": {} },
+  { "model": "shared.month", "pk": "Dec", "fields": {} },
+  { "model": "shared.month", "pk": "Feb", "fields": {} },
+  { "model": "shared.month", "pk": "Jan", "fields": {} },
+  { "model": "shared.month", "pk": "Jul", "fields": {} },
+  { "model": "shared.month", "pk": "Jun", "fields": {} },
+  { "model": "shared.month", "pk": "Mar", "fields": {} },
+  { "model": "shared.month", "pk": "May", "fields": {} },
+  { "model": "shared.month", "pk": "Nov", "fields": {} },
+  { "model": "shared.month", "pk": "Oct", "fields": {} },
+  { "model": "shared.month", "pk": "Sep", "fields": {} },
+  {
+    "model": "shared.countrymonth",
+    "pk": 1,
+    "fields": { "country": 1, "month": "Jan", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 2,
+    "fields": { "country": 1, "month": "Feb", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 3,
+    "fields": { "country": 1, "month": "Mar", "when_to_visit": "MIXED" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 4,
+    "fields": { "country": 1, "month": "Apr", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 5,
+    "fields": { "country": 1, "month": "May", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 6,
+    "fields": { "country": 1, "month": "Jun", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 7,
+    "fields": { "country": 1, "month": "Jul", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 8,
+    "fields": { "country": 1, "month": "Aug", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 9,
+    "fields": { "country": 1, "month": "Sep", "when_to_visit": "GOOD" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 10,
+    "fields": { "country": 1, "month": "Oct", "when_to_visit": "MIXED" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 11,
+    "fields": { "country": 1, "month": "Nov", "when_to_visit": "MIXED" }
+  },
+  {
+    "model": "shared.countrymonth",
+    "pk": 12,
+    "fields": { "country": 1, "month": "Dec", "when_to_visit": "BEST" }
+  },
+  {
+    "model": "shared.countryhomeof",
+    "pk": 1,
+    "fields": { "country": 1, "title": "Indigenous culture, like Batwa" }
+  },
+  {
+    "model": "shared.countryfamous",
+    "pk": 1,
+    "fields": { "country": 1, "title": "Lake victoria" }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-06-23T18:46:37.127Z",
+      "user": 1,
+      "content_type": 27,
+      "object_id": "1",
+      "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla.webp",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-06-23T18:46:56.186Z",
+      "user": 1,
+      "content_type": 27,
+      "object_id": "2",
+      "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla_wBNGDoG.webp",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-06-23T18:47:18.175Z",
+      "user": 1,
+      "content_type": 27,
+      "object_id": "3",
+      "object_repr": "Gorilla-at-Sanctuary-Gorilla-Forest-Camp.webp",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-06-23T18:47:31.753Z",
+      "user": 1,
+      "content_type": 30,
+      "object_id": "1",
+      "object_repr": "uganda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-06-23T18:51:56.226Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "1",
+      "object_repr": "Uganda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country month\", \"object\": \"Month for Uganda\"}}, {\"added\": {\"name\": \"country famous\", \"object\": \"Lake victoria in Uganda\"}}, {\"added\": {\"name\": \"country home of\", \"object\": \"Indigenous culture, like Batwa in Uganda\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-06-23T19:56:06.650Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "Big 5 Safari",
+      "object_repr": "Big 5 Safari",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-06-23T19:57:13.421Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "Boat Trip",
+      "object_repr": "Boat Trip",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-06-23T19:57:28.869Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "Guided Walking Safari",
+      "object_repr": "Guided Walking Safari",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-06-23T19:57:43.179Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "Helicopter Flights",
+      "object_repr": "Helicopter Flights",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-06-23T19:58:26.444Z",
+      "user": 1,
+      "content_type": 29,
+      "object_id": "Pels Fishing Owl",
+      "object_repr": "Pels Fishing Owl",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-06-23T20:00:24.140Z",
+      "user": 1,
+      "content_type": 29,
+      "object_id": "Lion",
+      "object_repr": "Lion",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-06-23T20:01:00.388Z",
+      "user": 1,
+      "content_type": 29,
+      "object_id": "Leopard",
+      "object_repr": "Leopard",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-06-23T20:02:26.231Z",
+      "user": 1,
+      "content_type": 29,
+      "object_id": "Lechwe",
+      "object_repr": "Lechwe",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-06-23T20:06:22.272Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "uganda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Glide through the waterways in a traditional mokoro\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Home to Mombo Camp, considered the no.1 safari camp in Africa\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Exceptional bird watching, including rare species Pel's fishing owl\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Encounter the rare species of Victoria Fall's rainforests\"}}, {\"added\": {\"name\": \"highlights\", \"object\": \"Glide through the waterways in a traditional mokoro\"}}, {\"added\": {\"name\": \"destination animals overview\", \"object\": \"DestinationAnimalsOverview object (1)\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jan\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Feb\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Mar\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Apr\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - May\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jun\"}}, {\"added\": {\"name\": \"destination month\", \"object\": \" uganda - Jul\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-06-23T20:15:51.815Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "OKAVANGO DELTA",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-06-23T20:17:33.002Z",
+      "user": 1,
+      "content_type": 27,
+      "object_id": "1",
+      "object_repr": "Batwa_Tribe_experience-Sanctuary-Gorilla.webp",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-06-23T20:24:31.880Z",
+      "user": 1,
+      "content_type": 27,
+      "object_id": "4",
+      "object_repr": "Guided-rainforest-trek-with-Sanctuary-Gorilla-Forest-Camp.webp",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-06-23T20:24:35.090Z",
+      "user": 1,
+      "content_type": 30,
+      "object_id": "1",
+      "object_repr": "uganda",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Images\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 1,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 1,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 1,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 1,
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add token",
+      "content_type": 2,
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change token",
+      "content_type": 2,
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete token",
+      "content_type": 2,
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view token",
+      "content_type": 2,
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add password reset code",
+      "content_type": 3,
+      "codename": "add_passwordresetcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change password reset code",
+      "content_type": 3,
+      "codename": "change_passwordresetcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete password reset code",
+      "content_type": 3,
+      "codename": "delete_passwordresetcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view password reset code",
+      "content_type": 3,
+      "codename": "view_passwordresetcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add signup code",
+      "content_type": 4,
+      "codename": "add_signupcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change signup code",
+      "content_type": 4,
+      "codename": "change_signupcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete signup code",
+      "content_type": 4,
+      "codename": "delete_signupcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view signup code",
+      "content_type": 4,
+      "codename": "view_signupcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add email change code",
+      "content_type": 5,
+      "codename": "add_emailchangecode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change email change code",
+      "content_type": 5,
+      "codename": "change_emailchangecode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete email change code",
+      "content_type": 5,
+      "codename": "delete_emailchangecode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view email change code",
+      "content_type": 5,
+      "codename": "view_emailchangecode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view category",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 8,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 8,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 8,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 8,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add enquire",
+      "content_type": 9,
+      "codename": "add_enquire"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change enquire",
+      "content_type": 9,
+      "codename": "change_enquire"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete enquire",
+      "content_type": 9,
+      "codename": "delete_enquire"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view enquire",
+      "content_type": 9,
+      "codename": "view_enquire"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add accommodation",
+      "content_type": 10,
+      "codename": "add_accommodation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change accommodation",
+      "content_type": 10,
+      "codename": "change_accommodation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete accommodation",
+      "content_type": 10,
+      "codename": "delete_accommodation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view accommodation",
+      "content_type": 10,
+      "codename": "view_accommodation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add insider tip",
+      "content_type": 11,
+      "codename": "add_insidertip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change insider tip",
+      "content_type": 11,
+      "codename": "change_insidertip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete insider tip",
+      "content_type": 11,
+      "codename": "delete_insidertip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view insider tip",
+      "content_type": 11,
+      "codename": "view_insidertip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add glance",
+      "content_type": 12,
+      "codename": "add_glance"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change glance",
+      "content_type": 12,
+      "codename": "change_glance"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete glance",
+      "content_type": 12,
+      "codename": "delete_glance"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view glance",
+      "content_type": 12,
+      "codename": "view_glance"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add expert view",
+      "content_type": 13,
+      "codename": "add_expertview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change expert view",
+      "content_type": 13,
+      "codename": "change_expertview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete expert view",
+      "content_type": 13,
+      "codename": "delete_expertview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view expert view",
+      "content_type": 13,
+      "codename": "view_expertview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add destination",
+      "content_type": 14,
+      "codename": "add_destination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change destination",
+      "content_type": 14,
+      "codename": "change_destination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete destination",
+      "content_type": 14,
+      "codename": "delete_destination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view destination",
+      "content_type": 14,
+      "codename": "view_destination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add highlights",
+      "content_type": 15,
+      "codename": "add_highlights"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change highlights",
+      "content_type": 15,
+      "codename": "change_highlights"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete highlights",
+      "content_type": 15,
+      "codename": "delete_highlights"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view highlights",
+      "content_type": 15,
+      "codename": "view_highlights"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add destination month",
+      "content_type": 16,
+      "codename": "add_destinationmonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change destination month",
+      "content_type": 16,
+      "codename": "change_destinationmonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete destination month",
+      "content_type": 16,
+      "codename": "delete_destinationmonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view destination month",
+      "content_type": 16,
+      "codename": "view_destinationmonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add destination location",
+      "content_type": 17,
+      "codename": "add_destinationlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change destination location",
+      "content_type": 17,
+      "codename": "change_destinationlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete destination location",
+      "content_type": 17,
+      "codename": "delete_destinationlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view destination location",
+      "content_type": 17,
+      "codename": "view_destinationlocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add destination animals overview",
+      "content_type": 18,
+      "codename": "add_destinationanimalsoverview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change destination animals overview",
+      "content_type": 18,
+      "codename": "change_destinationanimalsoverview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete destination animals overview",
+      "content_type": 18,
+      "codename": "delete_destinationanimalsoverview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view destination animals overview",
+      "content_type": 18,
+      "codename": "view_destinationanimalsoverview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add itineraries",
+      "content_type": 19,
+      "codename": "add_itineraries"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change itineraries",
+      "content_type": 19,
+      "codename": "change_itineraries"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete itineraries",
+      "content_type": 19,
+      "codename": "delete_itineraries"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view itineraries",
+      "content_type": 19,
+      "codename": "view_itineraries"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add itinerary month",
+      "content_type": 20,
+      "codename": "add_itinerarymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change itinerary month",
+      "content_type": 20,
+      "codename": "change_itinerarymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete itinerary month",
+      "content_type": 20,
+      "codename": "delete_itinerarymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view itinerary month",
+      "content_type": 20,
+      "codename": "view_itinerarymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Can add itinerary activity",
+      "content_type": 21,
+      "codename": "add_itineraryactivity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Can change itinerary activity",
+      "content_type": 21,
+      "codename": "change_itineraryactivity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Can delete itinerary activity",
+      "content_type": 21,
+      "codename": "delete_itineraryactivity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Can view itinerary activity",
+      "content_type": 21,
+      "codename": "view_itineraryactivity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "name": "Can add included",
+      "content_type": 22,
+      "codename": "add_included"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "name": "Can change included",
+      "content_type": 22,
+      "codename": "change_included"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "name": "Can delete included",
+      "content_type": 22,
+      "codename": "delete_included"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "name": "Can view included",
+      "content_type": 22,
+      "codename": "view_included"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "name": "Can add excluded",
+      "content_type": 23,
+      "codename": "add_excluded"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "name": "Can change excluded",
+      "content_type": 23,
+      "codename": "change_excluded"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "name": "Can delete excluded",
+      "content_type": 23,
+      "codename": "delete_excluded"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "name": "Can view excluded",
+      "content_type": 23,
+      "codename": "view_excluded"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+      "name": "Can add day by day",
+      "content_type": 24,
+      "codename": "add_daybyday"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+      "name": "Can change day by day",
+      "content_type": 24,
+      "codename": "change_daybyday"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+      "name": "Can delete day by day",
+      "content_type": 24,
+      "codename": "delete_daybyday"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+      "name": "Can view day by day",
+      "content_type": 24,
+      "codename": "view_daybyday"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+      "name": "Can add activity",
+      "content_type": 25,
+      "codename": "add_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+      "name": "Can change activity",
+      "content_type": 25,
+      "codename": "change_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+      "name": "Can delete activity",
+      "content_type": 25,
+      "codename": "delete_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "name": "Can view activity",
+      "content_type": 25,
+      "codename": "view_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+      "name": "Can add country",
+      "content_type": 26,
+      "codename": "add_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+      "name": "Can change country",
+      "content_type": 26,
+      "codename": "change_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+      "name": "Can delete country",
+      "content_type": 26,
+      "codename": "delete_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+      "name": "Can view country",
+      "content_type": 26,
+      "codename": "view_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+      "name": "Can add images",
+      "content_type": 27,
+      "codename": "add_images"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+      "name": "Can change images",
+      "content_type": 27,
+      "codename": "change_images"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+      "name": "Can delete images",
+      "content_type": 27,
+      "codename": "delete_images"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+      "name": "Can view images",
+      "content_type": 27,
+      "codename": "view_images"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+      "name": "Can add month",
+      "content_type": 28,
+      "codename": "add_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+      "name": "Can change month",
+      "content_type": 28,
+      "codename": "change_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+      "name": "Can delete month",
+      "content_type": 28,
+      "codename": "delete_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+      "name": "Can view month",
+      "content_type": 28,
+      "codename": "view_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+      "name": "Can add wildlife",
+      "content_type": 29,
+      "codename": "add_wildlife"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+      "name": "Can change wildlife",
+      "content_type": 29,
+      "codename": "change_wildlife"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+      "name": "Can delete wildlife",
+      "content_type": 29,
+      "codename": "delete_wildlife"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+      "name": "Can view wildlife",
+      "content_type": 29,
+      "codename": "view_wildlife"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 117,
+    "fields": {
+      "name": "Can add gallery",
+      "content_type": 30,
+      "codename": "add_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 118,
+    "fields": {
+      "name": "Can change gallery",
+      "content_type": 30,
+      "codename": "change_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 119,
+    "fields": {
+      "name": "Can delete gallery",
+      "content_type": 30,
+      "codename": "delete_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 120,
+    "fields": {
+      "name": "Can view gallery",
+      "content_type": 30,
+      "codename": "view_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 121,
+    "fields": {
+      "name": "Can add country month",
+      "content_type": 31,
+      "codename": "add_countrymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 122,
+    "fields": {
+      "name": "Can change country month",
+      "content_type": 31,
+      "codename": "change_countrymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 123,
+    "fields": {
+      "name": "Can delete country month",
+      "content_type": 31,
+      "codename": "delete_countrymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 124,
+    "fields": {
+      "name": "Can view country month",
+      "content_type": 31,
+      "codename": "view_countrymonth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 125,
+    "fields": {
+      "name": "Can add country home of",
+      "content_type": 32,
+      "codename": "add_countryhomeof"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 126,
+    "fields": {
+      "name": "Can change country home of",
+      "content_type": 32,
+      "codename": "change_countryhomeof"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 127,
+    "fields": {
+      "name": "Can delete country home of",
+      "content_type": 32,
+      "codename": "delete_countryhomeof"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 128,
+    "fields": {
+      "name": "Can view country home of",
+      "content_type": 32,
+      "codename": "view_countryhomeof"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 129,
+    "fields": {
+      "name": "Can add country famous",
+      "content_type": 33,
+      "codename": "add_countryfamous"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 130,
+    "fields": {
+      "name": "Can change country famous",
+      "content_type": 33,
+      "codename": "change_countryfamous"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 131,
+    "fields": {
+      "name": "Can delete country famous",
+      "content_type": 33,
+      "codename": "delete_countryfamous"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 132,
+    "fields": {
+      "name": "Can view country famous",
+      "content_type": 33,
+      "codename": "view_countryfamous"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 133,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 34,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 134,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 34,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 135,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 34,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 136,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 34,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 137,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 35,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 138,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 35,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 139,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 35,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 140,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 35,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 141,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 36,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 142,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 36,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 143,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 36,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 144,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 36,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 145,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 37,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 146,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 37,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 147,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 37,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 148,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 37,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 149,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 38,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 150,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 38,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 151,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 38,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 152,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 38,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 153,
+    "fields": {
+      "name": "Can add contact us",
+      "content_type": 39,
+      "codename": "add_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 154,
+    "fields": {
+      "name": "Can change contact us",
+      "content_type": 39,
+      "codename": "change_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 155,
+    "fields": {
+      "name": "Can delete contact us",
+      "content_type": 39,
+      "codename": "delete_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 156,
+    "fields": {
+      "name": "Can view contact us",
+      "content_type": 39,
+      "codename": "view_contactus"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "authtoken", "model": "token" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "authtoken", "model": "tokenproxy" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "authemail", "model": "passwordresetcode" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "authemail", "model": "signupcode" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "authemail", "model": "emailchangecode" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "accounts", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "blog", "model": "category" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "blog", "model": "post" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "enquire", "model": "enquire" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "accommodation", "model": "accommodation" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "accommodation", "model": "insidertip" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "accommodation", "model": "glance" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "accommodation", "model": "expertview" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": { "app_label": "destination", "model": "destination" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": { "app_label": "destination", "model": "highlights" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": { "app_label": "destination", "model": "destinationmonth" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": { "app_label": "destination", "model": "destinationlocation" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "destination",
+      "model": "destinationanimalsoverview"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": { "app_label": "itineraries", "model": "itineraries" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": { "app_label": "itineraries", "model": "itinerarymonth" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": { "app_label": "itineraries", "model": "itineraryactivity" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": { "app_label": "itineraries", "model": "included" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": { "app_label": "itineraries", "model": "excluded" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": { "app_label": "itineraries", "model": "daybyday" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": { "app_label": "shared", "model": "activity" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 26,
+    "fields": { "app_label": "shared", "model": "country" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 27,
+    "fields": { "app_label": "shared", "model": "images" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 28,
+    "fields": { "app_label": "shared", "model": "month" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 29,
+    "fields": { "app_label": "shared", "model": "wildlife" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 30,
+    "fields": { "app_label": "shared", "model": "gallery" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 31,
+    "fields": { "app_label": "shared", "model": "countrymonth" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 32,
+    "fields": { "app_label": "shared", "model": "countryhomeof" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 33,
+    "fields": { "app_label": "shared", "model": "countryfamous" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 34,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 35,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 36,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 37,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 38,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 39,
+    "fields": { "app_label": "enquire", "model": "contactus" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "uw2jwfcjtbmqrgck31alzbxntul8zi0l",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hCYDgIu3fcMZICpVA0kpV0Z765NutDtf-_9lwi0rSVsnZcwZ3ERWpx-t0jpwXUH-U711mRqdV3mKHdFHrTLsWV-Xg_376BQL98aUTtjImVCUMZqnOyABCoxITtUPHDKfgJv_ZkVowVKzkNEA6yZtHh_AM-UN5g:1qCgPu:VBuVO5r3fbxrxYx0oN5XON4K1iu58TqEfZibIP1pFEk",
+      "expire_date": "2023-07-07T13:01:34.059Z"
+    }
+  }
+]
