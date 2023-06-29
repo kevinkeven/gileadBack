@@ -178,7 +178,7 @@ MEDIA_ROOT = BASE_DIR / "media/"
 STATIC_URL = "static/"
 STATIC_ROOT = "staticfiles/"
 
-if DEBUG:
+if not DEBUG:
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
