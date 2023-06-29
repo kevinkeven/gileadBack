@@ -178,8 +178,8 @@ MEDIA_ROOT = BASE_DIR / "media/"
 STATIC_URL = "static/"
 STATIC_ROOT = "staticfiles/"
 
-if not DEBUG:
-    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# if not DEBUG:
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
 AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", cast=str, default="api")
