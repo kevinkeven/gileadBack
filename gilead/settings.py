@@ -29,7 +29,7 @@ SECRET_KEY = "rz@&wl7#lz)ez32=7(_ozfa^k!2zeu#)7&86-1!6knnql%=uhu"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = config("DEBUG", cast=bool, default=True)
+DEBUG = config("DEBUG", cast=bool, default=False)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -178,7 +178,7 @@ MEDIA_ROOT = BASE_DIR / "media/"
 STATIC_URL = "static/"
 STATIC_ROOT = "staticfiles/"
 
-if not DEBUG:
+if DEBUG:
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
