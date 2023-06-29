@@ -95,7 +95,7 @@ class ContactUsCreate(generics.CreateAPIView):
                 Please take the necessary steps to respond to this enquiry promptly and provide the sender with the required information or assistance. Kindly ensure that the sender's email and contact details are correctly recorded for effective communication.
                 """,
             "gileadsummitholidays@gmail.com",
-            ["kevinkeven20@gmail.com"],
+            ["kevinkevendev@gmail.com"],
         )
         return response
 
