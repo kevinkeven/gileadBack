@@ -145,7 +145,7 @@ EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "apikey"
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="apii")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="api")
 
 
 # Internationalization
