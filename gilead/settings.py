@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
-import django_on_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY", cast=str, default="keey")
+SECRET_KEY = "rz@&wl7#lz)ez32=7(_ozfa^k!2zeu#)7&86-1!6knnql%=uhu"
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
@@ -31,9 +30,11 @@ SECRET_KEY = config("SECRET_KEY", cast=str, default="keey")
 
 DEBUG = config("DEBUG", cast=bool, default=False)
 
+ALLOWED_HOSTS = ["*"]
+
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://api.gileadsummitholidays.com",
+    "https://gilead-back-end.server.cimuf.com",
 ]
 
 REST_FRAMEWORK = {
@@ -81,7 +82,6 @@ DATABASES = {
         "PORT": config("DB_PORT"),
     }
 }
-
 ROOT_URLCONF = "gilead.urls"
 
 
@@ -198,5 +198,3 @@ CSRF_COOKIE_SECURE = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-django_on_heroku.settings(locals())
