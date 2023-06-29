@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import django_on_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,15 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "rz@&wl7#lz)ez32=7(_ozfa^k!2zeu#)7&86-1!6knnql%=uhu"
+SECRET_KEY = config("SECRET_KEY", cast=str, default="key")
 
 # ADMINS = config("ADMINS", cast=lambda v: [s.strip() for s in v.split(",")])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = config("DEBUG", cast=bool, default=False)
-
-ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -72,21 +71,15 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "gilerkjy_gilead",
-#         "USER": "gilerkjy_gilead",
-#         "PASSWORD": "admin@gilead",
-#         "HOST": "localhost",
-#         "PORT": 3306,
-#         "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
-#     }
-# }
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config("DB_NAME", cast=str, default="gilead"),
+        "USER": config("DB_USER", cast=str, default="root"),
+        "PASSWORD": config("DB_PASSWORD", cast=str, default="root"),
+        "HOST": "localhost",
+        "PORT": 3306,
+        "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
     }
 }
 
@@ -206,3 +199,5 @@ CSRF_COOKIE_SECURE = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+django_on_heroku.settings(locals())
