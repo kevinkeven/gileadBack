@@ -178,14 +178,15 @@ MEDIA_ROOT = BASE_DIR / "media/"
 STATIC_URL = "static/"
 STATIC_ROOT = "staticfiles/"
 
-# if not DEBUG:
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+if not DEBUG:
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
 AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", cast=str, default="api")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", cast=str, default="api")
 AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME", cast=str, default="api")
 AWS_QUERYSTRING_AUTH = config("AWS_QUERYSTRING_AUTH", cast=str, default="api")
+AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
