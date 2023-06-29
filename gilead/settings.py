@@ -28,7 +28,7 @@ SECRET_KEY = "rz@&wl7#lz)ez32=7(_ozfa^k!2zeu#)7&86-1!6knnql%=uhu"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = config("DEBUG", cast=bool, default=False)
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
