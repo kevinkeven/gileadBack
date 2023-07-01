@@ -27,7 +27,6 @@ class DestinationAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "country",
-        "description",
         "image",
         "slug",
     )
