@@ -37,10 +37,7 @@ class Glance(models.Model):
     accommodation = models.ForeignKey(
         Accommodation, on_delete=models.CASCADE, related_name="glance"
     )
-    image = models.ImageField(
-        upload_to="accommodation/glance_images/", blank=True, null=True
-    )
-    description = models.TextField()
+    description = models.CharField(max_length=200)
 
     def __str__(self):
         return self.description
@@ -53,7 +50,7 @@ class InsiderTip(models.Model):
     accommodation = models.ForeignKey(
         Accommodation, on_delete=models.CASCADE, related_name="insidertip"
     )
-    description = models.TextField()
+    description = models.CharField(max_length=200)
 
     def __str__(self):
         return self.description
