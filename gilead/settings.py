@@ -186,6 +186,11 @@ AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", cast=str, default="api")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", cast=str, default="apii")
 AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME", cast=str, default="api")
 AWS_QUERYSTRING_AUTH = config("AWS_QUERYSTRING_AUTH", cast=str, default="apii")
+AWS_S3_REGION_NAME = "eu-north-1"
+
+AWS_S3_OBJECT_PARAMETERS = {
+    "CacheControl": "max-age=86400",
+}
 AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 SESSION_COOKIE_SECURE = True
