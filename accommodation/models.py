@@ -12,7 +12,7 @@ class Accommodation(models.Model):
     slug = models.SlugField(max_length=255)
     description = models.TextField()
     image = models.ImageField(upload_to="accommodation_images/")
-    luxury = models.BooleanField(default=False)
+    luxury = models.BooleanField(default=False, blank=True, null=True)
     activities = models.ManyToManyField(
         Activity, limit_choices_to=models.Q(destination=models.F("destination"))
     )
