@@ -24,7 +24,6 @@ class AccommodationAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "destination",
-        "description",
         "image",
         "slug",
     )
