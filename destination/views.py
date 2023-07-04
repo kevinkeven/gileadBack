@@ -8,6 +8,7 @@ from accommodation import serializers as acser
 from accommodation import models as acmod
 from itineraries.models import itineraries
 from itineraries.serializers import ItinerarySerializer
+from rest_framework import permissions
 
 
 # Destination Create, List, Detail, Update, Delete views
@@ -19,7 +20,7 @@ class DestinationList(generics.ListAPIView):
 class DestinationCreate(generics.CreateAPIView):
     queryset = models.Destination.objects.all()
     serializer_class = serializers.DestinationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class DestinationDetail(generics.GenericAPIView):
@@ -82,13 +83,13 @@ class DestinationDetail(generics.GenericAPIView):
 class DestinationDestroy(generics.RetrieveDestroyAPIView):
     queryset = models.Destination.objects.all()
     serializer_class = serializers.DestinationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class DestinationUpdate(generics.UpdateAPIView):
     queryset = models.Destination.objects.all()
     serializer_class = serializers.DestinationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Highlight Create, List, Detail, Update, Delete views
@@ -100,19 +101,19 @@ class HighlightsList(generics.ListAPIView):
 class HighlightsCreate(generics.CreateAPIView):
     queryset = models.Highlights.objects.all()
     serializer_class = serializers.HighlightSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class HighlightsDetail(generics.RetrieveDestroyAPIView):
     queryset = models.Highlights.objects.all()
     serializer_class = serializers.HighlightSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class HighlightsDestroy(generics.RetrieveDestroyAPIView):
     queryset = models.Highlights.objects.all()
     serializer_class = serializers.HighlightSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class HighlightsListByDestination(generics.ListAPIView):
@@ -127,4 +128,4 @@ class HighlightsListByDestination(generics.ListAPIView):
 class HighlightsUpdate(generics.UpdateAPIView):
     queryset = models.Highlights.objects.all()
     serializer_class = serializers.HighlightSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

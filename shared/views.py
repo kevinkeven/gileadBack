@@ -6,6 +6,7 @@ from destination.serializers import DestinationSerializer
 from destination.models import Destination
 from itineraries.serializers import ItinerarySerializer
 from shared import models
+from rest_framework import permissions
 
 
 # Images Create, List, Detail, Update, Delete views
@@ -17,16 +18,19 @@ class ImageList(generics.ListAPIView):
 class ImageCreate(generics.CreateAPIView):
     queryset = models.Images.objects.all()
     serializer_class = serializers.ImageSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ImageDetailDestroy(generics.RetrieveDestroyAPIView):
     queryset = models.Images.objects.all()
     serializer_class = serializers.ImageSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ImageUpdate(generics.UpdateAPIView):
     queryset = models.Images.objects.all()
     serializer_class = serializers.ImageUpdateSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Country Create, List, Detail, Update, Delete views
@@ -97,13 +101,13 @@ class CountryDestinations(generics.RetrieveAPIView):
 class CountryDestroy(generics.DestroyAPIView):
     queryset = models.Country.objects.all()
     serializer_class = serializers.CountrySerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class CountryCreate(generics.CreateAPIView):
     queryset = models.Country.objects.all()
     serializer_class = serializers.CountrySerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class CountryDestinationsList(generics.ListAPIView):
@@ -120,7 +124,7 @@ class CountryDestinationsList(generics.ListAPIView):
 class CountryUpdate(generics.UpdateAPIView):
     queryset = models.Country.objects.all()
     serializer_class = serializers.CountryUpdateSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Activity Create, List, Detail, Update, Delete views
@@ -132,16 +136,19 @@ class ActivityList(generics.ListAPIView):
 class ActivityCreate(generics.CreateAPIView):
     queryset = models.Activity.objects.all()
     serializer_class = serializers.ActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ActivityDetailDestroy(generics.RetrieveDestroyAPIView):
     queryset = models.Activity.objects.all()
     serializer_class = serializers.ActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ActivityUpdate(generics.UpdateAPIView):
     queryset = models.Activity.objects.all()
     serializer_class = serializers.ActivityUpdateSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ActivityDestinationsList(generics.ListAPIView):
@@ -164,16 +171,19 @@ class WildlifeList(generics.ListAPIView):
 class WildlifeCreate(generics.CreateAPIView):
     queryset = models.Wildlife.objects.all()
     serializer_class = serializers.WildLifeSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class WildlifeDetailDestroy(generics.RetrieveDestroyAPIView):
     queryset = models.Wildlife.objects.all()
     serializer_class = serializers.WildLifeSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class WildlifeUpdate(generics.UpdateAPIView):
     queryset = models.Wildlife.objects.all()
     serializer_class = serializers.WildLifeUpdateSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # GALLERY Create, List, Detail, Update, Delete views
@@ -201,13 +211,16 @@ class GalleryDetail(generics.RetrieveAPIView):
 class GalleryCreate(generics.CreateAPIView):
     queryset = models.Gallery.objects.all()
     serializer_class = serializers.GallerySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class GalleryUpdate(generics.UpdateAPIView):
     queryset = models.Gallery.objects.all()
     serializer_class = serializers.GallerySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class GalleryDestroy(generics.DestroyAPIView):
     queryset = models.Gallery.objects.all()
     serializer_class = serializers.GallerySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

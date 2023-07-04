@@ -9,6 +9,8 @@ from accommodation import models
 from shared.serializers import WildLifeSerializer, ActivitySerializer
 from drf_multiple_model.views import ObjectMultipleModelAPIView
 
+from rest_framework import permissions
+
 from shared import serializers as shser
 from shared import models as shmod
 
@@ -22,7 +24,7 @@ class AccommodationList(generics.ListAPIView):
 class AccommodationCreate(generics.CreateAPIView):
     queryset = models.Accommodation.objects.all()
     serializer_class = serializers.AccommodationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class AccommodationDetail(generics.GenericAPIView):
@@ -67,13 +69,13 @@ class AccommodationDetail(generics.GenericAPIView):
 class AccommodationDestroy(generics.DestroyAPIView):
     queryset = models.Accommodation.objects.all()
     serializer_class = serializers.AccommodationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class AccommodationUpdate(generics.UpdateAPIView):
     queryset = models.Accommodation.objects.all()
     serializer_class = serializers.AccommodationSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class AccomodationActivitiesList(generics.ListAPIView):
@@ -109,25 +111,25 @@ class ExpertViewListByAccommodation(generics.ListAPIView):
 class ExpertViewCreate(generics.CreateAPIView):
     queryset = models.ExpertView.objects.all()
     serializer_class = serializers.ExpertViewSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ExpertViewDetail(generics.RetrieveAPIView):
     queryset = models.ExpertView.objects.all()
     serializer_class = serializers.ExpertViewSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ExpertViewDestroy(generics.DestroyAPIView):
     queryset = models.ExpertView.objects.all()
     serializer_class = serializers.ExpertViewSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ExpertViewUpdate(generics.UpdateAPIView):
     queryset = models.ExpertView.objects.all()
     serializer_class = serializers.ExpertViewSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Glance Create, List, Detail, Update, Delete views
@@ -147,25 +149,25 @@ class GlanceListByAccommodation(generics.ListAPIView):
 class GlanceCreate(generics.CreateAPIView):
     queryset = models.Glance.objects.all()
     serializer_class = serializers.GlanceSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class GlanceDetail(generics.RetrieveAPIView):
     queryset = models.Glance.objects.all()
     serializer_class = serializers.GlanceSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class GlanceDestroy(generics.DestroyAPIView):
     queryset = models.Glance.objects.all()
     serializer_class = serializers.GlanceSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class GlanceUpdate(generics.UpdateAPIView):
     queryset = models.Glance.objects.all()
     serializer_class = serializers.GlanceSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # InsiderTip Create, List, Detail, Update, Delete views
@@ -177,25 +179,25 @@ class InsiderTipList(generics.ListAPIView):
 class InsiderTipCreate(generics.CreateAPIView):
     queryset = models.InsiderTip.objects.all()
     serializer_class = serializers.InsiderTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class InsiderTipDetail(generics.RetrieveAPIView):
     queryset = models.InsiderTip.objects.all()
     serializer_class = serializers.InsiderTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class InsiderTipDestroy(generics.DestroyAPIView):
     queryset = models.InsiderTip.objects.all()
     serializer_class = serializers.InsiderTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class InsiderTipUpdate(generics.UpdateAPIView):
     queryset = models.InsiderTip.objects.all()
     serializer_class = serializers.InsiderTipSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class InsiderTipListByAccommodation(generics.ListAPIView):

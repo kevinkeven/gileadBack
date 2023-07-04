@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from itineraries import serializers
 from itineraries import models
 
+from rest_framework import permissions
+
 
 # Itinerary views
 class ItineraryList(generics.ListAPIView):
@@ -14,6 +16,7 @@ class ItineraryList(generics.ListAPIView):
 class ItineraryCreate(generics.CreateAPIView):
     queryset = models.itineraries.objects.all()
     serializer_class = serializers.ItinerarySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryDetail(generics.GenericAPIView):
@@ -64,11 +67,13 @@ class ItineraryDetail(generics.GenericAPIView):
 class ItineraryUpdate(generics.UpdateAPIView):
     queryset = models.itineraries.objects.all()
     serializer_class = serializers.ItinerarySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryDelete(generics.DestroyAPIView):
     queryset = models.itineraries.objects.all()
     serializer_class = serializers.ItinerarySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # ItineraryActivity views
@@ -80,6 +85,7 @@ class ItineraryActivityList(generics.ListAPIView):
 class ItineraryActivityCreate(generics.CreateAPIView):
     queryset = models.ItineraryActivity.objects.all()
     serializer_class = serializers.ItineraryActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryActivityDetail(generics.RetrieveAPIView):
@@ -90,11 +96,13 @@ class ItineraryActivityDetail(generics.RetrieveAPIView):
 class ItineraryActivityUpdate(generics.UpdateAPIView):
     queryset = models.ItineraryActivity.objects.all()
     serializer_class = serializers.ItineraryActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryActivityDelete(generics.DestroyAPIView):
     queryset = models.ItineraryActivity.objects.all()
     serializer_class = serializers.ItineraryActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # ItineraryMonth views
@@ -106,6 +114,7 @@ class ItineraryMonthList(generics.ListAPIView):
 class ItineraryMonthCreate(generics.CreateAPIView):
     queryset = models.ItineraryMonth.objects.all()
     serializer_class = serializers.ItineraryMonthSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryMonthDetail(generics.RetrieveAPIView):
@@ -116,11 +125,13 @@ class ItineraryMonthDetail(generics.RetrieveAPIView):
 class ItineraryMonthUpdate(generics.UpdateAPIView):
     queryset = models.ItineraryMonth.objects.all()
     serializer_class = serializers.ItineraryMonthSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ItineraryMonthDelete(generics.DestroyAPIView):
     queryset = models.ItineraryMonth.objects.all()
     serializer_class = serializers.ItineraryMonthSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Included views
@@ -132,6 +143,7 @@ class IncludedList(generics.ListAPIView):
 class IncludedCreate(generics.CreateAPIView):
     queryset = models.Included.objects.all()
     serializer_class = serializers.IncludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class IncludedDetail(generics.RetrieveAPIView):
@@ -142,11 +154,13 @@ class IncludedDetail(generics.RetrieveAPIView):
 class IncludedUpdate(generics.UpdateAPIView):
     queryset = models.Included.objects.all()
     serializer_class = serializers.IncludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class IncludedDelete(generics.DestroyAPIView):
     queryset = models.Included.objects.all()
     serializer_class = serializers.IncludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Excluded views
@@ -158,6 +172,7 @@ class ExcludedList(generics.ListAPIView):
 class ExcludedCreate(generics.CreateAPIView):
     queryset = models.Excluded.objects.all()
     serializer_class = serializers.ExcludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ExcludedDetail(generics.RetrieveAPIView):
@@ -168,11 +183,13 @@ class ExcludedDetail(generics.RetrieveAPIView):
 class ExcludedUpdate(generics.UpdateAPIView):
     queryset = models.Excluded.objects.all()
     serializer_class = serializers.ExcludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class ExcludedDelete(generics.DestroyAPIView):
     queryset = models.Excluded.objects.all()
     serializer_class = serializers.ExcludedSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # dayByDay views
@@ -184,6 +201,7 @@ class dayByDayList(generics.ListAPIView):
 class dayByDayCreate(generics.CreateAPIView):
     queryset = models.dayByDay.objects.all()
     serializer_class = serializers.dayByDaySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class dayByDayDetail(generics.RetrieveAPIView):
@@ -194,8 +212,10 @@ class dayByDayDetail(generics.RetrieveAPIView):
 class dayByDayUpdate(generics.UpdateAPIView):
     queryset = models.dayByDay.objects.all()
     serializer_class = serializers.dayByDaySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class dayByDayDelete(generics.DestroyAPIView):
     queryset = models.dayByDay.objects.all()
     serializer_class = serializers.dayByDaySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
