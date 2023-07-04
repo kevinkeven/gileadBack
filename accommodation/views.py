@@ -34,10 +34,8 @@ class AccommodationDetail(generics.GenericAPIView):
         accommodation_serializer["image"] = request.build_absolute_uri(
             accommodation.image.url
         )
-        insidertip = accommodation.insidertip.all()
-        insidertip_serializer = serializers.InsiderTipSerializerDetail(
-            insidertip, many=True
-        )
+        insidertip = accommodation.insidertip
+        insidertip_serializer = serializers.InsiderTipSerializerDetail(insidertip)
 
         expertview = accommodation.expertview.all()
         expertview_serializer = serializers.ExpertViewSerializerDetail(
