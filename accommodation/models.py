@@ -64,7 +64,7 @@ class ExpertView(models.Model):
     accommodation = models.ForeignKey(
         Accommodation, on_delete=models.CASCADE, related_name="expertview"
     )
-    name = models.CharField(max_length=500)
+    name = models.TextField()
 
     def __str__(self):
         return self.name
