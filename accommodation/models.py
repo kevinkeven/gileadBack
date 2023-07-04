@@ -48,7 +48,7 @@ class Glance(models.Model):
 
 
 class InsiderTip(models.Model):
-    accommodation = models.ForeignKey(
+    accommodation = models.OneToOneField(
         Accommodation, on_delete=models.CASCADE, related_name="insidertip"
     )
     description = models.TextField()
