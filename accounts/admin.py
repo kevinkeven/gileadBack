@@ -21,7 +21,6 @@ class MyUserAdmin(EmailUserAdmin):
             },
         ),
         ("Important dates", {"fields": ("last_login", "date_joined")}),
-        ("Custom info", {"fields": ("date_of_birth",)}),
     )
 
 

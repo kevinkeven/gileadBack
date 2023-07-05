@@ -13,7 +13,7 @@ class itineraries(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to="itineraries/images")
-    price = models.IntegerField()
+    price = models.IntegerField(blank=True, null=True)
     duration = models.IntegerField()
     slug = models.SlugField(max_length=100, unique=True)
     transport = models.CharField(max_length=100)

@@ -115,6 +115,7 @@ TEMPLATES = [
     },
 ]
 
+AUTH_EMAIL_VERIFICATION = False
 WSGI_APPLICATION = "gilead.wsgi.application"
 
 
@@ -166,6 +167,8 @@ AUTH_USER_MODEL = "accounts.User"
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.TokenAuthentication",
+        # "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
     )
 }
 

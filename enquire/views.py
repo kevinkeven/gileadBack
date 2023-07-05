@@ -6,6 +6,7 @@ from enquire import serializers
 from enquire import models
 from sendgrid import SendGridAPIClient
 from django.core.mail import send_mail
+from rest_framework import permissions
 
 
 class EnquireList(generics.ListAPIView):
@@ -69,6 +70,7 @@ class ContactUsList(generics.ListAPIView):
 class ContactUsCreate(generics.CreateAPIView):
     queryset = models.ContactUs.objects.all()
     serializer_class = serializers.ContactUsSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)
