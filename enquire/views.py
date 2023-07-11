@@ -52,7 +52,7 @@ class EnquireCreate(generics.CreateAPIView):
                 Please take the necessary steps to respond to this enquiry promptly and provide the sender with the required information or assistance. Kindly ensure that the sender's email and contact details are correctly recorded for effective communication.
                 """,
             "gileadsummitholidays@gmail.com",
-            ["kevinkevendev@gmail.com"],
+            ["kevinkevendev@gmail.com", "gileadsummitholidays@gmail.com"],
         )
         return response
 
@@ -70,7 +70,7 @@ class ContactUsList(generics.ListAPIView):
 class ContactUsCreate(generics.CreateAPIView):
     queryset = models.ContactUs.objects.all()
     serializer_class = serializers.ContactUsSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)
@@ -97,7 +97,7 @@ class ContactUsCreate(generics.CreateAPIView):
                 Please take the necessary steps to respond to this enquiry promptly and provide the sender with the required information or assistance. Kindly ensure that the sender's email and contact details are correctly recorded for effective communication.
                 """,
             "gileadsummitholidays@gmail.com",
-            ["kevinkevendev@gmail.com"],
+            ["kevinkevendev@gmail.com", "gileadsummitholidays@gmail.com"],
         )
         return response
 
