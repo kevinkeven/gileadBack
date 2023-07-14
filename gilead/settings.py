@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     "itineraries",
     "search",
     "shared",
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -72,7 +73,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-
+JAZZMIN_UI_TWEAKS = {"show_ui_builder": True}
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
