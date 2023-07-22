@@ -29,7 +29,6 @@ urlpatterns = [
     path("api/itineraries/", include("itineraries.urls")),
     path("api/blog/", include("blog.urls")),
     path("api-auth/", include("rest_framework.urls")),
-    path("mdeditor/", include("mdeditor.urls")),
     # path("api/bookings/", include("bookings.urls")),
     # path("api/search/", include("search.urls")),
     # path("api/tours/", include("tours.urls")),
