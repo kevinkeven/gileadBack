@@ -2,7 +2,6 @@ from typing import Iterable, Optional
 from django.db import models
 from django.conf import settings
 from django.utils.text import slugify
-from mdeditor.fields import MDTextField
 
 
 # Create your models here.
@@ -17,7 +16,7 @@ class Post(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts"
     )
 
-    body = MDTextField()
+    body = models.TextField()
     image = models.ImageField(upload_to="blog/image")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
