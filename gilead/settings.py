@@ -141,13 +141,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-EMAIL_BCC = "admin@gilead.com"
-EMAIL_FROM = "gileadsummitholidays@gmail.com"
-EMAIL_HOST = "smtp.sendgrid.net"
-EMAIL_PORT = 25
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "apikey"
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="api")
+if not DEBUG:
+    EMAIL_BCC = "admin@gilead.com"
+    EMAIL_FROM = "gileadsummitholidays@gmail.com"
+    EMAIL_HOST = "smtp.sendgrid.net"
+    EMAIL_PORT = 25
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = "apikey"
+    EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", cast=str, default="api")
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

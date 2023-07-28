@@ -7,7 +7,13 @@ import uuid
 
 class Enquire(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-
+    itinerary = models.ForeignKey(
+        "itineraries.itineraries",
+        on_delete=models.CASCADE,
+        related_name="enquiries",
+        blank=True,
+        null=True,
+    )
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.EmailField()
@@ -19,7 +25,9 @@ class Enquire(models.Model):
         MIDRANGE = "Midrange"
         BUDGET = "Budget"
 
-    travel_destination = models.ManyToManyField(Country, related_name="yourtrip")
+    travel_destination = models.ManyToManyField(
+        Country, related_name="yourtrip", blank=True
+    )
     travel_date = models.DateField()
     travel_duration = models.IntegerField()
     travel_type = models.CharField(
