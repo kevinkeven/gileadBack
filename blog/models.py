@@ -30,7 +30,7 @@ class Post(models.Model):
         return super().save(*args, **kwargs)
 
     class Meta:
-        ordering = ["-status"]
+        ordering = ["-created"]
         indexes = [
             models.Index(fields=["-status"]),
         ]
