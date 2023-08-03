@@ -27,8 +27,8 @@ class EnquireCreate(generics.CreateAPIView):
         email = form_data.get("email")
         subject = f"New Enquiry by {form_data.get('first_name').upper()} {form_data.get('last_name')} from Gilead summit holidays"
         itineraryId = form_data.get("itinerary")
-        itinerary = itineraries.objects.get(id=itineraryId)
-        if itinerary:
+        if itineraryId:
+            itinerary = itineraries.objects.get(id=itineraryId)
             destinations_country = itinerary.country.name
             send_mail(
                 subject,
