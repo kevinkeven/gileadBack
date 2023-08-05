@@ -46,7 +46,7 @@ class itinerariesSitemap(Sitemap):
         return itineraries.objects.all()
 
     def location(self, obj):
-        return f"itineraries/detail/{obj.slug}"
+        return f"/itineraries/detail/{obj.slug}"
 
 
 class accommodationSitemap(Sitemap):
@@ -58,7 +58,7 @@ class accommodationSitemap(Sitemap):
         return Accommodation.objects.all()
 
     def location(self, obj):
-        return f"accommodation/{obj.slug}"
+        return f"/accommodation/{obj.slug}"
 
 
 class CountrySitemap(Sitemap):
