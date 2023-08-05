@@ -70,4 +70,4 @@ class CountrySitemap(Sitemap):
         return Country.objects.all()
 
     def location(self, obj):
-        return f"Country/{obj.slug}"
+        return f"/Country/{obj.slug}"
