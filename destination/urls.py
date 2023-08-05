@@ -1,6 +1,7 @@
 from django.urls import path
 from destination import views
 
+
 urlpatterns = [
     # Destination URLs
     path("list/", views.DestinationList.as_view()),

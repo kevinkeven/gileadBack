@@ -17,7 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.contrib.sitemaps.views import sitemap
+from gilead.sitemap import (
+    destinationSitemap,
+    blogSitemap,
+    accommodationSitemap,
+    CountrySitemap,
+    itinerariesSitemap,
+)
 from django.conf.urls.static import static
+
+sitemaps = {
+    "destination": destinationSitemap,
+    "blog": blogSitemap,
+    "accommodation": accommodationSitemap,
+    "country": CountrySitemap,
+    "itinerary": itinerariesSitemap,
+}
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,6 +45,12 @@ urlpatterns = [
     path("api/itineraries/", include("itineraries.urls")),
     path("api/blog/", include("blog.urls")),
     path("api-auth/", include("rest_framework.urls")),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
     # path("api/bookings/", include("bookings.urls")),
     # path("api/search/", include("search.urls")),
     # path("api/tours/", include("tours.urls")),

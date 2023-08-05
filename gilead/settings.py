@@ -49,6 +49,7 @@ REST_FRAMEWORK = {
 
 
 # Application definition
+SITE_ID = 4
 
 INSTALLED_APPS = [
     "rest_framework",
@@ -65,6 +66,8 @@ INSTALLED_APPS = [
     "itineraries",
     "search",
     "shared",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
