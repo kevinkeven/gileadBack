@@ -13,6 +13,7 @@ from blog.models import Post
 class destinationSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.9
+    protocol = "https"
 
     def items(self):
         return Destination.objects.all()
@@ -24,6 +25,7 @@ class destinationSitemap(Sitemap):
 class blogSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.9
+    protocol = "https"
 
     def items(self):
         return Post.objects.all()
@@ -38,6 +40,7 @@ class blogSitemap(Sitemap):
 class itinerariesSitemap(Sitemap):
     changefreq = "daily"
     priority = 1
+    protocol = "https"
 
     def items(self):
         return itineraries.objects.all()
@@ -49,6 +52,7 @@ class itinerariesSitemap(Sitemap):
 class accommodationSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.8
+    protocol = "https"
 
     def items(self):
         return Accommodation.objects.all()
@@ -60,6 +64,7 @@ class accommodationSitemap(Sitemap):
 class CountrySitemap(Sitemap):
     changefreq = "daily"
     priority = 0.9
+    protocol = "https"
 
     def items(self):
         return Country.objects.all()
