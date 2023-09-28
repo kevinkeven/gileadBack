@@ -23,6 +23,12 @@ class CountrySerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class CountryShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Country
+        fields = ("id", "name", "slug")
+
+
 class CountryUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Country

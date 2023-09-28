@@ -1,9 +1,12 @@
 from rest_framework import serializers
 from destination import models
+from shared import serializers as shared_serializers
 
 
 # #Destination serializers
 class DestinationSerializer(serializers.ModelSerializer):
+    country = shared_serializers.CountryShortSerializer(read_only=True)
+
     class Meta:
         model = models.Destination
         fields = "__all__"

@@ -1,12 +1,29 @@
 from rest_framework import serializers
 from itineraries import models
+from shared import serializers as shared_serializers
 
 
 # #Itinerary serializers
 class ItinerarySerializer(serializers.ModelSerializer):
+    country = shared_serializers.CountryShortSerializer(read_only=True)
+
     class Meta:
         model = models.itineraries
-        fields = "__all__"
+        fields = (
+            "id",
+            "name",
+            "description",
+            "image",
+            "price",
+            "duration",
+            "slug",
+            "transport",
+            "accommodation",
+            "departureFrom",
+            "latitude",
+            "longitude",
+            "country",
+        )
 
 
 class ItineraryActivitySerializer(serializers.ModelSerializer):

@@ -3,6 +3,8 @@ from rest_framework import generics
 from rest_framework.response import Response
 from itineraries import serializers
 from itineraries import models
+from shared import models as shared_models
+from shared import serializers as shared_serializers
 
 from rest_framework import permissions
 
