@@ -9,6 +9,8 @@ class BlogSerializer(serializers.ModelSerializer):
 
 
 class BlogCreationSerializers(serializers.ModelSerializer):
+    author = serializers.ReadOnlyField(source="author.id")
+
     class Meta:
         model = Post
         exclude = ["slug"]

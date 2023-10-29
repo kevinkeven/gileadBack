@@ -37,6 +37,7 @@ sitemaps = {
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api-auth/", include("rest_framework.urls")),
     path("api/accounts/", include("authemail.urls")),
     path("api/destination/", include("destination.urls")),
     path("api/accommodation/", include("accommodation.urls")),
@@ -44,7 +45,6 @@ urlpatterns = [
     path("api/enquire/", include("enquire.urls")),
     path("api/itineraries/", include("itineraries.urls")),
     path("api/blog/", include("blog.urls")),
-    path("api-auth/", include("rest_framework.urls")),
     path(
         "sitemap.xml",
         sitemap,

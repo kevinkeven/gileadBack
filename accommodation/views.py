@@ -19,6 +19,7 @@ from shared import models as shmod
 class AccommodationList(generics.ListAPIView):
     queryset = models.Accommodation.objects.all()
     serializer_class = serializers.AccommodationSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class AccommodationCreate(generics.CreateAPIView):
